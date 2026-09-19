@@ -1,0 +1,2635 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bối cảnh Đầu Thế kỷ XX</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,900;1,400&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,600;1,8..60,400&family=Space+Mono:wght@400;700&display=swap"
+    rel="stylesheet">
+  <style>
+    /* ── TOKENS ── */
+    :root {
+      --bg: #0c0a08;
+      --bg-s: #161210;
+      --bg-e: #201a14;
+      --bg-card: #1c1612;
+      --gold: #c4a35a;
+      --gold-d: #a08040;
+      --gold-b: #e8c47a;
+      --red: #8c2f2f;
+      --red-b: #c05555;
+      --green: #5a9a6a;
+      --tx: #e6dcc8;
+      --tx-s: #bdb09a;
+      --tx-m: #8a7e6e;
+      --border: #2a221a;
+      --border-g: #4a3c28;
+      --r: 4px;
+    }
+
+    /* ── RESET ── */
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--tx);
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 17px;
+      line-height: 1.75;
+      min-height: 100vh;
+    }
+
+    img {
+      max-width: 100%;
+    }
+
+    button {
+      cursor: pointer;
+    }
+
+    /* ── TYPOGRAPHY ── */
+    .display {
+      font-family: 'Playfair Display', Georgia, serif;
+    }
+
+    .mono {
+      font-family: 'Space Mono', 'Courier New', monospace;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4 {
+      font-family: 'Playfair Display', Georgia, serif;
+      text-wrap: balance;
+      line-height: 1.25;
+    }
+
+    h2 {
+      font-size: clamp(1.6rem, 3vw, 2.2rem);
+      color: var(--gold-b);
+      margin-bottom: 1rem;
+    }
+
+    h3 {
+      font-size: 1.2rem;
+      color: var(--tx);
+      margin-bottom: .5rem;
+    }
+
+    h4 {
+      font-size: 1rem;
+      color: var(--gold);
+      font-weight: 600;
+      margin-bottom: .4rem;
+    }
+
+    p {
+      max-width: 68ch;
+      margin-bottom: 1rem;
+    }
+
+    p:last-child {
+      margin-bottom: 0;
+    }
+
+    img {
+      transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94), box-shadow 0.4s ease, filter 0.4s ease;
+      filter: brightness(0.95);
+    }
+    
+    img:hover {
+      transform: scale(1.02) translateY(-2px);
+      box-shadow: 0 12px 30px rgba(196, 163, 90, 0.12);
+      filter: brightness(1.05);
+    }
+
+    /* ── PROGRESS NAV ── */
+    #progress-nav {
+      position: fixed;
+      right: 1.25rem;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 100;
+      display: flex;
+      flex-direction: column;
+      gap: .75rem;
+    }
+
+    .pnav-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--tx-m);
+      border: 1px solid var(--border-g);
+      transition: background .3s, transform .3s;
+      cursor: pointer;
+      position: relative;
+    }
+
+    .pnav-dot::before {
+      content: attr(data-label);
+      position: absolute;
+      right: 16px;
+      top: 50%;
+      transform: translateY(-50%);
+      font-family: 'Space Mono', monospace;
+      font-size: .65rem;
+      color: var(--tx-s);
+      white-space: nowrap;
+      opacity: 0;
+      transition: opacity .2s;
+      pointer-events: none;
+    }
+
+    .pnav-dot:hover::before,
+    .pnav-dot.active::before {
+      opacity: 1;
+    }
+
+    .pnav-dot.active {
+      background: var(--gold);
+      transform: scale(1.4);
+    }
+
+    /* ── SECTION WRAPPER ── */
+    .section {
+      padding: 5rem 1.5rem;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .section-full {
+      padding: 5rem 1.5rem;
+      width: 100%;
+    }
+
+    .inner {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    /* ── EYEBROW ── */
+    .eyebrow {
+      font-family: 'Space Mono', monospace;
+      font-size: .7rem;
+      letter-spacing: .15em;
+      text-transform: uppercase;
+      color: var(--gold-d);
+      margin-bottom: .75rem;
+    }
+
+    /* ── DIVIDER ── */
+    .divider {
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--border-g), transparent);
+      margin: 0;
+    }
+
+    /* ══════════════════════════════════════════
+   HERO
+══════════════════════════════════════════ */
+    #hero {
+      min-height: 90vh;
+      display: flex;
+      align-items: center;
+      padding: 4rem 1.5rem 3rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    #hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 60% 50% at 20% 50%, rgba(196, 163, 90, .07) 0%, transparent 70%),
+        radial-gradient(ellipse 40% 60% at 80% 30%, rgba(140, 47, 47, .05) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .hero-inner {
+      max-width: 860px;
+      margin: 0 auto;
+      width: 100%;
+    }
+
+    .hero-tag {
+      display: inline-block;
+      font-family: 'Space Mono', monospace;
+      font-size: .7rem;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      color: var(--gold);
+      border: 1px solid var(--border-g);
+      padding: .3rem .75rem;
+      border-radius: 2px;
+      margin-bottom: 2rem;
+    }
+
+    .hero-h1 {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: clamp(2.2rem, 6vw, 4rem);
+      font-weight: 900;
+      line-height: 1.1;
+      color: var(--tx);
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-h1 span {
+      color: var(--gold);
+    }
+
+    .hero-question {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-style: italic;
+      font-size: clamp(1.05rem, 2.2vw, 1.3rem);
+      color: var(--tx-s);
+      max-width: 62ch;
+      border-left: 2px solid var(--red);
+      padding-left: 1.25rem;
+      margin-bottom: 2.5rem;
+      line-height: 1.6;
+    }
+
+    .hero-meta {
+      font-family: 'Space Mono', monospace;
+      font-size: .72rem;
+      color: var(--tx-m);
+      letter-spacing: .08em;
+    }
+
+    .hero-meta span {
+      color: var(--gold-d);
+      margin: 0 .5rem;
+    }
+
+    .scroll-hint {
+      margin-top: 3rem;
+      display: flex;
+      align-items: center;
+      gap: .75rem;
+      font-family: 'Space Mono', monospace;
+      font-size: .68rem;
+      color: var(--tx-m);
+      letter-spacing: .1em;
+      text-transform: uppercase;
+    }
+
+    .scroll-hint-line {
+      flex: 1;
+      height: 1px;
+      background: linear-gradient(90deg, var(--border-g), transparent);
+    }
+
+    /* ══════════════════════════════════════════
+   TIMELINE
+══════════════════════════════════════════ */
+    #timeline {
+      background: var(--bg-s);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      padding: 2.5rem 1.5rem;
+      overflow-x: auto;
+    }
+
+    .timeline-label {
+      font-family: 'Space Mono', monospace;
+      font-size: .68rem;
+      color: var(--tx-m);
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      margin-bottom: 1.5rem;
+      max-width: 900px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .tl-track {
+      display: flex;
+      align-items: flex-start;
+      gap: 0;
+      min-width: 800px;
+      max-width: 1000px;
+      margin: 0 auto;
+      position: relative;
+    }
+
+    .tl-track::before {
+      content: '';
+      position: absolute;
+      top: 6px;
+      /* Thay vì 28px để chạy cắt giữa chấm tròn thay vì chữ */
+      left: 0;
+      right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--border-g) 10%, var(--border-g) 90%, transparent);
+      z-index: 0;
+    }
+
+    .tl-item {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      position: relative;
+      cursor: pointer;
+      padding: 0 .25rem;
+      transition: opacity .3s;
+    }
+
+    .tl-item:not(.tl-key):not(:hover) {
+      opacity: 0.55;
+      /* Làm nhạt các mốc thời gian còn lại */
+    }
+
+    .tl-dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: var(--bg-e);
+      border: 2px solid var(--border-g);
+      margin-bottom: .6rem;
+      transition: border-color .2s, background .2s;
+      z-index: 1;
+      position: relative;
+      /* Thêm position relative để z-index hoạt động đè lên timeline */
+      flex-shrink: 0;
+    }
+
+    .tl-item:hover .tl-dot,
+    .tl-item.hl .tl-dot {
+      border-color: var(--gold);
+      background: var(--gold);
+    }
+
+    .tl-year {
+      font-family: 'Space Mono', monospace;
+      font-size: .65rem;
+      font-weight: 700;
+      color: var(--gold-d);
+      letter-spacing: .05em;
+      margin-bottom: .25rem;
+    }
+
+    .tl-desc {
+      font-size: .65rem;
+      color: var(--tx-m);
+      line-height: 1.3;
+      max-width: 80px;
+    }
+
+    .tl-item.hl .tl-year {
+      color: var(--gold-b);
+    }
+
+    .tl-item.hl .tl-desc {
+      color: var(--tx-s);
+    }
+
+    .tl-item.tl-key .tl-dot {
+      border-color: var(--red-b);
+      background: var(--red-b);
+      width: 16px;
+      height: 16px;
+      margin-top: -2px;
+      box-shadow: 0 0 0 4px rgba(192, 85, 85, 0.25);
+    }
+
+    .tl-item.tl-key .tl-year {
+      color: var(--red-b);
+      font-weight: 700;
+      font-size: .75rem;
+      /* Phóng to nhẹ cho năm 1911 */
+    }
+
+    .tl-item.tl-key .tl-desc {
+      color: var(--tx);
+      font-weight: 600;
+    }
+
+    /* ══════════════════════════════════════════
+   SECTIONS — SHARED
+══════════════════════════════════════════ */
+    .section-number {
+      font-family: 'Space Mono', monospace;
+      font-size: 4rem;
+      font-weight: 700;
+      color: var(--tx-m);
+      opacity: .25;
+      line-height: 1;
+      margin-bottom: -.5rem;
+      display: block;
+      user-select: none;
+    }
+
+    .callout {
+      background: var(--bg-e);
+      border: 1px solid var(--border-g);
+      border-left: 3px solid var(--gold);
+      padding: 1.25rem 1.5rem;
+      border-radius: 0 var(--r) var(--r) 0;
+      margin: 1.5rem 0;
+      font-style: italic;
+      color: var(--tx-s);
+      font-size: .95rem;
+    }
+
+    .callout cite {
+      display: block;
+      font-style: normal;
+      font-family: 'Space Mono', monospace;
+      font-size: .65rem;
+      color: var(--gold-d);
+      margin-top: .75rem;
+      letter-spacing: .06em;
+    }
+
+    .callout-red {
+      border-left-color: var(--red);
+    }
+
+    /* ══════════════════════════════════════════
+   TẦNG 1 — ÁP BỨC
+══════════════════════════════════════════ */
+    .society-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+      margin: 1.5rem 0;
+    }
+
+    .society-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--r);
+      padding: 1.25rem;
+    }
+
+    .society-card .pct {
+      font-family: 'Space Mono', monospace;
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: var(--gold);
+      line-height: 1;
+      margin-bottom: .3rem;
+    }
+
+    .society-card h4 {
+      color: var(--tx-s);
+      font-size: .85rem;
+      margin-bottom: .4rem;
+    }
+
+    .society-card p {
+      font-size: .85rem;
+      color: var(--tx-m);
+      margin: 0;
+      max-width: none;
+    }
+
+    .contradiction-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: .5rem;
+      margin: 1rem 0;
+    }
+
+    .contradiction-list li {
+      display: flex;
+      align-items: center;
+      gap: .75rem;
+      font-size: .9rem;
+      color: var(--tx-s);
+    }
+
+    .contradiction-list li::before {
+      content: '⟷';
+      color: var(--red);
+      font-family: monospace;
+      flex-shrink: 0;
+    }
+
+    /* ══════════════════════════════════════════
+   TẦNG 2 — CON ĐƯỜNG CŨ
+══════════════════════════════════════════ */
+    .tendency-tabs {
+      display: flex;
+      gap: .5rem;
+      margin-bottom: 1.5rem;
+      flex-wrap: wrap;
+    }
+
+    .tab-btn {
+      font-family: 'Space Mono', monospace;
+      font-size: .72rem;
+      letter-spacing: .08em;
+      padding: .5rem 1rem;
+      border: 1px solid var(--border-g);
+      background: transparent;
+      color: var(--tx-s);
+      border-radius: 2px;
+      transition: all .2s;
+      text-transform: uppercase;
+    }
+
+    .tab-btn.active,
+    .tab-btn:hover {
+      background: var(--bg-e);
+      border-color: var(--gold-d);
+      color: var(--gold);
+    }
+
+    .tab-panel {
+      display: none;
+    }
+
+    .tab-panel.active {
+      display: block;
+    }
+
+    .phong-trao-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      grid-auto-rows: min-content;
+      /* Hàng sẽ cao bằng nội dung lớn nhất */
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .pt-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--r);
+      overflow: hidden;
+      cursor: pointer;
+      transition: border-color .2s;
+    }
+
+    .pt-card:hover {
+      border-color: var(--border-g);
+    }
+
+    .pt-card.expanded {
+      border-color: var(--gold-d);
+    }
+
+    .pt-header {
+      padding: 1rem 1.25rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: .5rem;
+    }
+
+    .pt-name {
+      font-family: 'Playfair Display', serif;
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--tx);
+      line-height: 1.3;
+    }
+
+    .pt-years {
+      font-family: 'Space Mono', monospace;
+      font-size: .65rem;
+      color: var(--gold-d);
+      white-space: nowrap;
+      margin-top: .15rem;
+    }
+
+    .pt-expand-icon {
+      font-size: .8rem;
+      color: var(--tx-m);
+      transition: transform .2s;
+      flex-shrink: 0;
+      margin-top: .2rem;
+    }
+
+    .pt-card.expanded .pt-expand-icon {
+      transform: rotate(180deg);
+      color: var(--gold);
+    }
+
+    .pt-body {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height .35s ease;
+    }
+
+    .pt-card.expanded .pt-body {
+      max-height: var(--row-max-h, 600px);
+      height: var(--row-max-h, auto);
+      /* Mở ra với chiều dài lớn nhất của hàng đó */
+    }
+
+    .pt-body-inner {
+      padding: 0 1.25rem 1.25rem;
+      border-top: 1px solid var(--border);
+      margin-top: 0;
+    }
+
+    .pt-body-inner p {
+      font-size: .88rem;
+      color: var(--tx-s);
+      max-width: none;
+      margin-bottom: .5rem;
+    }
+
+    .pt-body-inner p:last-child {
+      margin-bottom: 0;
+    }
+
+    .pt-label {
+      font-size: .72rem;
+      color: var(--gold-d);
+      font-family: 'Space Mono', monospace;
+    }
+
+    .pt-body-inner .fail-tag {
+      display: inline-block;
+      font-size: .7rem;
+      background: rgba(140, 47, 47, .15);
+      border: 1px solid rgba(140, 47, 47, .3);
+      color: var(--red-b);
+      padding: .15rem .5rem;
+      border-radius: 2px;
+      margin-top: .5rem;
+      font-family: 'Space Mono', monospace;
+    }
+
+    .crisis-box {
+      background: rgba(140, 47, 47, .08);
+      border: 1px solid rgba(140, 47, 47, .25);
+      border-radius: var(--r);
+      padding: 1.75rem;
+      margin: 2rem 0;
+      text-align: center;
+    }
+
+    .crisis-box h3 {
+      font-size: 1.35rem;
+      color: var(--red-b);
+      margin-bottom: .75rem;
+    }
+
+    .crisis-box p {
+      max-width: 54ch;
+      margin: 0 auto;
+      font-size: .95rem;
+      color: var(--tx-s);
+    }
+
+    /* ══════════════════════════════════════════
+   TẦNG 3 — GIAI CẤP CÔNG NHÂN
+══════════════════════════════════════════ */
+    .pressure-stack {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      margin: 1.5rem 0;
+      max-width: 480px;
+    }
+
+    .pressure-item {
+      padding: .9rem 1.25rem;
+      border: 1px solid var(--border);
+      background: var(--bg-card);
+      position: relative;
+    }
+
+    .pressure-item:not(:last-child) {
+      border-bottom: none;
+    }
+
+    .pressure-item:first-child {
+      border-radius: var(--r) var(--r) 0 0;
+    }
+
+    .pressure-item:last-child {
+      border-radius: 0 0 var(--r) var(--r);
+    }
+
+    .pressure-item .p-num {
+      font-family: 'Space Mono', monospace;
+      font-size: .65rem;
+      color: var(--gold-d);
+      margin-bottom: .2rem;
+    }
+
+    .pressure-item .p-name {
+      font-size: .95rem;
+      color: var(--tx);
+      font-weight: 600;
+    }
+
+    .pressure-arrow {
+      text-align: center;
+      font-size: .9rem;
+      color: var(--red);
+      margin: .15rem 0;
+      line-height: 1;
+    }
+
+    /* ══════════════════════════════════════════
+   TẦNG 4 — THẾ GIỚI
+══════════════════════════════════════════ */
+    .world-events {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      margin: 1.5rem 0;
+      position: relative;
+    }
+
+    .world-events::before {
+      content: '';
+      position: absolute;
+      left: 36px;
+      top: 0;
+      bottom: 0;
+      width: 1px;
+      background: var(--border-g);
+    }
+
+    .we-item {
+      display: flex;
+      gap: 1.25rem;
+      align-items: flex-start;
+    }
+
+    .we-year {
+      font-family: 'Space Mono', monospace;
+      font-size: .72rem;
+      font-weight: 700;
+      color: var(--gold);
+      background: var(--bg-s);
+      border: 1px solid var(--border-g);
+      padding: .3rem .5rem;
+      border-radius: 2px;
+      width: 72px;
+      text-align: center;
+      flex-shrink: 0;
+      position: relative;
+      z-index: 1;
+    }
+
+    .we-content h4 {
+      color: var(--tx);
+      margin-bottom: .3rem;
+      font-size: .95rem;
+    }
+
+    .we-content p {
+      font-size: .88rem;
+      color: var(--tx-s);
+      max-width: 52ch;
+      margin: 0;
+    }
+
+    /* ══════════════════════════════════════════
+   HỘI TỤ NHÂN QUẢ
+══════════════════════════════════════════ */
+    .causal-diagram {
+      margin: 2rem 0;
+      width: 100%;
+      overflow-x: auto;
+    }
+
+    .causal-inner {
+      min-width: 580px;
+      max-width: 780px;
+      margin: 0 auto;
+    }
+
+    .causal-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .causal-box {
+      background: var(--bg-card);
+      border: 1px solid var(--border-g);
+      border-radius: var(--r);
+      padding: 1rem 1.25rem;
+      text-align: center;
+    }
+
+    .causal-box.gold-border {
+      border-color: var(--gold-d);
+    }
+
+    .causal-box.red-border {
+      border-color: rgba(140, 47, 47, .5);
+    }
+
+    .causal-box .cb-label {
+      font-family: 'Space Mono', monospace;
+      font-size: .65rem;
+      color: var(--tx-m);
+      text-transform: uppercase;
+      letter-spacing: .1em;
+      margin-bottom: .4rem;
+    }
+
+    .causal-box .cb-title {
+      font-family: 'Playfair Display', serif;
+      font-size: .95rem;
+      color: var(--tx);
+      line-height: 1.3;
+    }
+
+    .causal-box.gold-border .cb-title {
+      color: var(--gold-b);
+    }
+
+    .causal-arrows {
+      display: flex;
+      justify-content: center;
+      gap: 0;
+      margin-bottom: 1.25rem;
+    }
+
+    .arrow-track {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 50%;
+    }
+
+    .arrow-line {
+      width: 1px;
+      height: 30px;
+      background: var(--border-g);
+    }
+
+    .arrow-tip {
+      color: var(--gold-d);
+      font-size: .8rem;
+      line-height: 1;
+    }
+
+    .causal-center {
+      background: rgba(196, 163, 90, .06);
+      border: 1px solid var(--gold-d);
+      border-radius: var(--r);
+      padding: 1.25rem;
+      text-align: center;
+      margin-bottom: 1.25rem;
+    }
+
+    .causal-center h3 {
+      color: var(--gold-b);
+      font-size: 1.15rem;
+      margin-bottom: .4rem;
+    }
+
+    .causal-center p {
+      font-size: .88rem;
+      color: var(--tx-s);
+      max-width: 46ch;
+      margin: 0 auto;
+    }
+
+    .causal-final-arrow {
+      text-align: center;
+      color: var(--gold-d);
+      font-size: 1.2rem;
+      margin-bottom: 1rem;
+    }
+
+    .causal-result {
+      background: rgba(196, 163, 90, .1);
+      border: 2px solid var(--gold);
+      border-radius: var(--r);
+      padding: 1.25rem;
+      text-align: center;
+    }
+
+    .causal-result h3 {
+      color: var(--gold-b);
+      font-size: 1.1rem;
+      margin-bottom: .4rem;
+    }
+
+    .causal-result p {
+      font-size: .88rem;
+      color: var(--tx-s);
+      max-width: 50ch;
+      margin: 0 auto;
+    }
+
+    /* ══════════════════════════════════════════
+   KẾT LUẬN
+══════════════════════════════════════════ */
+    .kl-quote-box {
+      border: 1px solid var(--border-g);
+      border-radius: var(--r);
+      padding: 2rem;
+      background: var(--bg-card);
+      margin: 1.5rem 0;
+      text-align: center;
+    }
+
+    .kl-quote-box .kq-date {
+      font-family: 'Space Mono', monospace;
+      font-size: .7rem;
+      color: var(--gold-d);
+      letter-spacing: .15em;
+      margin-bottom: .75rem;
+    }
+
+    .kl-quote-box .kq-text {
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      font-size: clamp(1rem, 2.5vw, 1.3rem);
+      color: var(--tx);
+      line-height: 1.6;
+      margin-bottom: 0;
+      max-width: 58ch;
+      margin: 0 auto;
+    }
+
+    /* ══════════════════════════════════════════
+   TƯƠNG TÁC
+══════════════════════════════════════════ */
+    #tuongtac {
+      background: var(--bg-s);
+      border-top: 1px solid var(--border);
+    }
+
+    .interact-tabs {
+      display: flex;
+      gap: .5rem;
+      margin-bottom: 2rem;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: .75rem;
+    }
+
+    .itab-btn {
+      font-family: 'Space Mono', monospace;
+      font-size: .72rem;
+      letter-spacing: .08em;
+      padding: .5rem 1.25rem;
+      border: none;
+      background: transparent;
+      color: var(--tx-m);
+      text-transform: uppercase;
+      cursor: pointer;
+      border-bottom: 2px solid transparent;
+      margin-bottom: -1px;
+      transition: all .2s;
+    }
+
+    .itab-btn.active {
+      color: var(--gold);
+      border-bottom-color: var(--gold);
+    }
+
+    .itab-panel {
+      display: none;
+    }
+
+    .itab-panel.active {
+      display: block;
+    }
+
+    /* QUIZ */
+    .quiz-progress-bar {
+      height: 2px;
+      background: var(--border);
+      border-radius: 1px;
+      margin-bottom: 1.75rem;
+      overflow: hidden;
+    }
+
+    .quiz-progress-fill {
+      height: 100%;
+      background: var(--gold);
+      border-radius: 1px;
+      transition: width .4s ease;
+    }
+
+    .quiz-q-num {
+      font-family: 'Space Mono', monospace;
+      font-size: .68rem;
+      color: var(--gold-d);
+      letter-spacing: .1em;
+      margin-bottom: .75rem;
+    }
+
+    .quiz-question {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.1rem;
+      color: var(--tx);
+      margin-bottom: 1.25rem;
+      line-height: 1.5;
+      max-width: 58ch;
+    }
+
+    .quiz-options {
+      display: flex;
+      flex-direction: column;
+      gap: .6rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .quiz-opt {
+      display: flex;
+      align-items: center;
+      gap: .75rem;
+      padding: .85rem 1.1rem;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--r);
+      cursor: pointer;
+      transition: all .2s;
+      font-size: .9rem;
+      color: var(--tx-s);
+      text-align: left;
+      width: 100%;
+    }
+
+    .quiz-opt:hover:not(:disabled) {
+      border-color: var(--border-g);
+      color: var(--tx);
+    }
+
+    .quiz-opt .opt-key {
+      font-family: 'Space Mono', monospace;
+      font-size: .7rem;
+      color: var(--tx-m);
+      background: var(--bg-e);
+      padding: .15rem .4rem;
+      border-radius: 2px;
+      flex-shrink: 0;
+    }
+
+    .quiz-opt.correct {
+      border-color: var(--green);
+      background: rgba(74, 124, 89, .1);
+      color: var(--tx);
+    }
+
+    .quiz-opt.correct .opt-key {
+      background: var(--green);
+      color: #fff;
+    }
+
+    .quiz-opt.wrong {
+      border-color: var(--red);
+      background: rgba(140, 47, 47, .1);
+      color: var(--tx-s);
+    }
+
+    .quiz-opt.wrong .opt-key {
+      background: var(--red);
+      color: #fff;
+    }
+
+    .quiz-opt:disabled {
+      cursor: not-allowed;
+    }
+
+    .quiz-feedback {
+      font-size: .88rem;
+      border-radius: var(--r);
+      padding: .75rem 1rem;
+      margin-bottom: 1rem;
+      display: none;
+    }
+
+    .quiz-feedback.show {
+      display: block;
+    }
+
+    .quiz-feedback.ok {
+      background: rgba(74, 124, 89, .12);
+      border: 1px solid rgba(74, 124, 89, .3);
+      color: #7fbf8f;
+    }
+
+    .quiz-feedback.no {
+      background: rgba(140, 47, 47, .12);
+      border: 1px solid rgba(140, 47, 47, .3);
+      color: var(--red-b);
+    }
+
+    .quiz-nav {
+      display: flex;
+      gap: .75rem;
+      align-items: center;
+    }
+
+    .quiz-btn {
+      font-family: 'Space Mono', monospace;
+      font-size: .72rem;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      padding: .6rem 1.25rem;
+      background: var(--bg-e);
+      border: 1px solid var(--border-g);
+      color: var(--gold);
+      border-radius: 2px;
+      transition: all .2s;
+    }
+
+    .quiz-btn:hover {
+      background: var(--bg-card);
+      border-color: var(--gold-d);
+    }
+
+    .quiz-btn:disabled {
+      opacity: .4;
+      cursor: not-allowed;
+    }
+
+    .quiz-result {
+      text-align: center;
+      padding: 2rem;
+      display: none;
+    }
+
+    .quiz-result.show {
+      display: block;
+    }
+
+    .quiz-result .qr-score {
+      font-family: 'Space Mono', monospace;
+      font-size: 3rem;
+      font-weight: 700;
+      color: var(--gold);
+      line-height: 1;
+      margin-bottom: .5rem;
+    }
+
+    .quiz-result p {
+      color: var(--tx-s);
+      margin-bottom: 1.25rem;
+      max-width: none;
+    }
+
+    .quiz-retry {
+      font-family: 'Space Mono', monospace;
+      font-size: .72rem;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      padding: .6rem 1.5rem;
+      background: transparent;
+      border: 1px solid var(--gold-d);
+      color: var(--gold);
+      border-radius: 2px;
+      cursor: pointer;
+    }
+
+    /* OPEN QUESTION */
+    .open-q-text {
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      font-size: 1.1rem;
+      color: var(--tx);
+      margin-bottom: .75rem;
+      max-width: 58ch;
+      line-height: 1.6;
+    }
+
+    .open-q-hint {
+      font-size: .85rem;
+      color: var(--tx-m);
+      margin-bottom: 1.25rem;
+    }
+
+    .open-q-area {
+      width: 100%;
+      max-width: 640px;
+      min-height: 140px;
+      background: var(--bg-card);
+      border: 1px solid var(--border-g);
+      border-radius: var(--r);
+      padding: 1rem;
+      color: var(--tx);
+      font-family: 'Source Serif 4', serif;
+      font-size: .9rem;
+      line-height: 1.7;
+      resize: vertical;
+      transition: border-color .2s;
+      display: block;
+      margin-bottom: .75rem;
+    }
+
+    .open-q-area::placeholder {
+      color: var(--tx-m);
+    }
+
+    .open-q-area:focus {
+      outline: none;
+      border-color: var(--gold-d);
+    }
+
+    .open-q-actions {
+      display: flex;
+      gap: .75rem;
+      align-items: center;
+    }
+
+    .oq-copy-btn {
+      font-family: 'Space Mono', monospace;
+      font-size: .72rem;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      padding: .55rem 1.25rem;
+      background: transparent;
+      border: 1px solid var(--border-g);
+      color: var(--gold);
+      border-radius: 2px;
+      transition: all .2s;
+    }
+
+    .oq-copy-btn:hover {
+      border-color: var(--gold-d);
+      background: var(--bg-e);
+    }
+
+    .oq-copy-note {
+      font-family: 'Space Mono', monospace;
+      font-size: .65rem;
+      color: var(--tx-m);
+      transition: color .3s;
+    }
+
+    .oq-copy-note.done {
+      color: var(--green);
+    }
+
+    .key-points {
+      margin-top: 2rem;
+      padding: 1.25rem;
+      background: var(--bg-e);
+      border: 1px solid var(--border-g);
+      border-radius: var(--r);
+      max-width: 640px;
+    }
+
+    .key-points h4 {
+      color: var(--gold-d);
+      font-size: .8rem;
+      font-family: 'Space Mono', monospace;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      margin-bottom: .75rem;
+    }
+
+    .key-points ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: .5rem;
+    }
+
+    .key-points li {
+      font-size: .88rem;
+      color: var(--tx-s);
+      padding-left: 1.2rem;
+      position: relative;
+    }
+
+    .key-points li::before {
+      content: '—';
+      position: absolute;
+      left: 0;
+      color: var(--gold-d);
+    }
+
+    /* ══════════════════════════════════════════
+   NGUỒN
+══════════════════════════════════════════ */
+    #nguon {
+      border-top: 1px solid var(--border);
+    }
+
+    .source-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: .75rem;
+      margin: 1.25rem 0;
+    }
+
+    .source-list li {
+      display: flex;
+      gap: 1rem;
+      font-size: .88rem;
+      color: var(--tx-s);
+      align-items: flex-start;
+    }
+
+    .src-id {
+      font-family: 'Space Mono', monospace;
+      font-size: .65rem;
+      color: var(--gold-d);
+      background: var(--bg-e);
+      border: 1px solid var(--border);
+      padding: .15rem .45rem;
+      border-radius: 2px;
+      flex-shrink: 0;
+      margin-top: .1rem;
+    }
+
+    /* ══════════════════════════════════════════
+   PHỤ LỤC AI
+══════════════════════════════════════════ */
+    #phuluc {
+      border-top: 1px solid var(--border);
+      background: var(--bg-s);
+    }
+
+    .ai-process-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: .5rem;
+      margin: 1rem 0;
+    }
+
+    .ai-process-list li {
+      font-size: .88rem;
+      color: var(--tx-s);
+      padding: .6rem 1rem;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--r);
+      display: flex;
+      gap: .75rem;
+      align-items: flex-start;
+    }
+
+    .ai-step {
+      font-family: 'Space Mono', monospace;
+      font-size: .6rem;
+      color: var(--gold-d);
+      background: var(--bg-e);
+      padding: .15rem .4rem;
+      border-radius: 2px;
+      flex-shrink: 0;
+      margin-top: .1rem;
+    }
+
+    /* ══════════════════════════════════════════
+   FOOTER
+══════════════════════════════════════════ */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 1.5rem;
+      text-align: center;
+      font-family: 'Space Mono', monospace;
+      font-size: .65rem;
+      color: var(--tx-m);
+      letter-spacing: .08em;
+    }
+
+    /* ══════════════════════════════════════════
+   ANIMATIONS (respectful)
+══════════════════════════════════════════ */
+    @media (prefers-reduced-motion: no-preference) {
+      .reveal {
+        transition: transform .5s ease, opacity .5s ease;
+      }
+
+      .reveal.from-below {
+        transform: translateY(16px);
+        opacity: .6;
+      }
+
+      .reveal.in-view {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    /* ══════════════════════════════════════════
+   RESPONSIVE
+══════════════════════════════════════════ */
+    @media (max-width: 640px) {
+      .section {
+        padding: 3rem 1rem;
+      }
+
+      #progress-nav {
+        display: none;
+      }
+
+      .tl-track {
+        margin: 0;
+        padding-right: 1.5rem;
+        /* Tạo khoảng trống khi vuốt ngang tới cuối */
+      }
+
+      .phong-trao-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .causal-inner {
+        min-width: 0;
+      }
+
+      .causal-row {
+        grid-template-columns: 1fr;
+      }
+
+      .arrow-track {
+        width: 100%;
+      }
+
+      .arrow-track:nth-child(2) {
+        display: none;
+        /* Ẩn mũi tên thứ hai khi giao diện xếp 1 cột */
+      }
+
+      .society-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* ══════════════════════════════════════════
+   LIGHT THEME
+══════════════════════════════════════════ */
+    [data-theme="light"] {
+      --bg: #ffffff;
+      --bg-s: #f4f4f4;
+      --bg-e: #ebebeb;
+      --bg-card: #f8f8f8;
+      --gold: #8a6018;
+      --gold-d: #9a7025;
+      --gold-b: #5a3808;
+      --red: #8c2f2f;
+      --red-b: #9a3535;
+      --green: #2a6a3a;
+      --tx: #111111;
+      --tx-s: #444444;
+      --tx-m: #777777;
+      --border: #e0e0e0;
+      --border-g: #d0d0d0;
+    }
+
+    /* ── THEME TOGGLE BUTTON ── */
+    #theme-toggle {
+      position: fixed;
+      top: 1.1rem;
+      right: 1.1rem;
+      z-index: 200;
+      display: flex;
+      align-items: center;
+      gap: .45rem;
+      padding: .4rem .9rem;
+      background: var(--bg-card);
+      border: 1px solid var(--border-g);
+      border-radius: 2px;
+      color: var(--gold);
+      font-family: 'Space Mono', monospace;
+      font-size: .67rem;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: background .2s, border-color .2s, color .2s;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, .18);
+    }
+
+    #theme-toggle:hover {
+      border-color: var(--gold);
+      background: var(--bg-e);
+    }
+
+    #theme-toggle .tt-icon {
+      font-size: .9rem;
+      line-height: 1;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ── THEME TOGGLE ── -->
+  <button id="theme-toggle" onclick="toggleTheme()" aria-label="Chuyển đổi giao diện">
+    <span class="tt-icon" id="tt-icon">☀</span>
+    <span id="tt-label">Sáng</span>
+  </button>
+
+  <!-- ── PROGRESS NAV ── -->
+  <nav id="progress-nav" aria-label="Điều hướng phần">
+    <div class="pnav-dot" data-target="hero" data-label="Giới thiệu"></div>
+    <div class="pnav-dot" data-target="tang1" data-label="Bối cảnh áp bức"></div>
+    <div class="pnav-dot" data-target="tang2" data-label="Con đường cũ"></div>
+    <div class="pnav-dot" data-target="tang3" data-label="Lực lượng mới"></div>
+    <div class="pnav-dot" data-target="tang4" data-label="Thế giới thay đổi"></div>
+    <div class="pnav-dot" data-target="hoitu" data-label="Hội tụ nhân quả"></div>
+    <div class="pnav-dot" data-target="ketluan" data-label="5-6-1911"></div>
+    <div class="pnav-dot" data-target="tuongtac" data-label="Tương tác"></div>
+    <div class="pnav-dot" data-target="nguon" data-label="Nguồn"></div>
+  </nav>
+
+  <!-- ══════════════════════════════════════════ HERO -->
+  <section id="hero">
+    <div class="hero-inner">
+      <div class="hero-tag">HCM202 · HCM-SPST-C2-04 · Chương II</div>
+      <h1 class="hero-h1">
+        Bối cảnh <span>Việt Nam</span><br>& Thế giới<br>Đầu Thế kỷ XX
+      </h1>
+      <p class="hero-question">
+        Vì sao bối cảnh lịch sử đặt ra yêu cầu tìm con đường giải phóng dân tộc mới?
+      </p>
+      <div class="hero-meta">
+        Tư tưởng Hồ Chí Minh<span>·</span>Chương II, Mục I.1 &amp; II.1<span>·</span>Historical Explainer
+      </div>
+      <div class="scroll-hint">
+        <div class="scroll-hint-line"></div>
+        Cuộn để khám phá chuỗi nhân quả
+        <div class="scroll-hint-line" style="background:linear-gradient(270deg,var(--border-g),transparent)"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════ TIMELINE -->
+  <div id="timeline">
+    <div class="timeline-label">Dòng thời gian — Các mốc then chốt</div>
+    <div class="tl-track" id="tl-track">
+      <div class="tl-item hl" data-section="tang1">
+        <div class="tl-dot"></div>
+        <div class="tl-year">1858</div>
+        <div class="tl-desc">Pháp xâm lược Việt Nam</div>
+      </div>
+      <div class="tl-item" data-section="tang2">
+        <div class="tl-dot"></div>
+        <div class="tl-year">1885</div>
+        <div class="tl-desc">Phong trào Cần Vương bùng nổ</div>
+      </div>
+      <div class="tl-item" data-section="tang2">
+        <div class="tl-dot"></div>
+        <div class="tl-year">1905</div>
+        <div class="tl-desc">Phong trào Đông Du (Phan Bội Châu)</div>
+      </div>
+      <div class="tl-item" data-section="tang2">
+        <div class="tl-dot"></div>
+        <div class="tl-year">1906</div>
+        <div class="tl-desc">Phong trào Duy Tân (Phan Châu Trinh)</div>
+      </div>
+      <div class="tl-item" data-section="tang2">
+        <div class="tl-dot"></div>
+        <div class="tl-year">1907</div>
+        <div class="tl-desc">Đông Kinh Nghĩa Thục ra đời</div>
+      </div>
+      <div class="tl-item tl-key" data-section="ketluan">
+        <div class="tl-dot"></div>
+        <div class="tl-year">5·6·1911</div>
+        <div class="tl-desc">HCM ra đi tìm đường cứu nước</div>
+      </div>
+      <div class="tl-item" data-section="tang4">
+        <div class="tl-dot"></div>
+        <div class="tl-year">1917</div>
+        <div class="tl-desc">CM Tháng Mười Nga thắng lợi</div>
+      </div>
+      <div class="tl-item" data-section="tang4">
+        <div class="tl-dot"></div>
+        <div class="tl-year">1919</div>
+        <div class="tl-desc">Quốc tế Cộng sản thành lập</div>
+      </div>
+      <div class="tl-item" data-section="tang2">
+        <div class="tl-dot"></div>
+        <div class="tl-year">1930</div>
+        <div class="tl-desc">Khởi nghĩa Yên Bái thất bại</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- ══════════════════════════════════════════ TẦNG 1 -->
+  <section class="section" id="tang1">
+    <div class="eyebrow">Tầng nguyên nhân thứ nhất</div>
+    <span class="section-number">01</span>
+    <h2>Bối cảnh áp bức &amp; Cơ cấu xã hội mới</h2>
+
+    <p class="reveal from-below">
+      Từ năm <strong>1858</strong>, đế quốc Pháp bắt đầu tiến hành xâm lược Việt Nam.
+      Triều đình nhà Nguyễn lần lượt ký kết các hiệp ước đầu hàng, từng bước trở thành
+      tay sai của thực dân Pháp.
+    </p>
+
+    <p class="reveal from-below">
+      Sau khi hoàn thành căn bản việc bình định về mặt quân sự, thực dân Pháp bắt tay
+      vào khai thác thuộc địa một cách mạnh mẽ, biến Việt Nam thành một nước thuộc địa
+      và phong kiến, dẫn tới những biến đổi sâu sắc trong cơ cấu xã hội.
+    </p>
+
+    <div class="reveal from-below" style="margin: 1.5rem 0; text-align: center;">
+      <img
+        src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Peasant_in_Vietnam.jpg?utm_source=vi.wikipedia.org&utm_campaign=parser&utm_content=thumbnail_unscaled"
+        alt="Ảnh thực dân Pháp khai thác thuộc địa"
+        style="border-radius: var(--r); border: 1px solid var(--border-g); max-width: 100%;">
+      <div
+        style="font-family: 'Space Mono', monospace; font-size: .75rem; color: var(--tx-s); margin-top: .6rem; line-height: 1.4;">
+        Nông dân Việt Nam dưới thời Pháp thuộc</div>
+    </div>
+
+    <div class="society-grid reveal from-below">
+      <div class="society-card">
+        <div class="pct">95%</div>
+        <h4>Nông dân</h4>
+        <p>Thực dân Pháp vẫn duy trì nền kinh tế nông nghiệp lạc hậu; giai cấp địa chủ được bổ sung, củng cố thêm điền
+          chủ người Pháp.</p>
+      </div>
+      <div class="society-card">
+        <div class="pct" style="color:var(--gold-b)">Mới</div>
+        <h4>Giai cấp Công nhân</h4>
+        <p>Xuất hiện từ cuối thế kỷ XIX; đến đầu thế kỷ XX phát triển thành một giai cấp trước Chiến tranh thế giới thứ
+          nhất 1914–1918.</p>
+      </div>
+      <div class="society-card">
+        <div class="pct" style="color:var(--tx-s)">Mới</div>
+        <h4>Tư sản &amp; Tiểu tư sản</h4>
+        <p>Giai cấp tư sản và tầng lớp tiểu tư sản thành thị xuất hiện, bên cạnh tầng lớp thợ thủ công, tiểu thương
+          truyền thống.</p>
+      </div>
+    </div>
+
+    <h3 class="reveal from-below" style="margin-top:1.5rem;margin-bottom:.75rem;">Các mâu thuẫn xã hội nổi bật</h3>
+    <ul class="contradiction-list reveal from-below">
+      <li>Nông dân &nbsp;⟷&nbsp; Địa chủ phong kiến (mâu thuẫn cơ bản trong xã hội phong kiến)</li>
+      <li>Giai cấp công nhân Việt Nam &nbsp;⟷&nbsp; Giai cấp tư sản</li>
+      <li>Toàn thể nhân dân Việt Nam &nbsp;⟷&nbsp; Đế quốc Pháp (mâu thuẫn mới, gay gắt nhất)</li>
+    </ul>
+
+    <div class="callout reveal from-below">
+      Thực dân Pháp vẫn duy trì nền kinh tế nông nghiệp lạc hậu với khoảng 95% dân số là nông dân.
+      Bên cạnh đó, xuất hiện những giai tầng mới: giai cấp công nhân, giai cấp tư sản và tầng lớp
+      tiểu tư sản ở thành thị.
+      <cite>Giáo trình Tư tưởng Hồ Chí Minh, Chương II, Mục I.1.a, trang 20</cite>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- ══════════════════════════════════════════ TẦNG 2 -->
+  <section class="section" id="tang2">
+    <div class="eyebrow">Tầng nguyên nhân thứ hai</div>
+    <span class="section-number">02</span>
+    <h2>Các con đường cũ liên tiếp thất bại</h2>
+
+    <p class="reveal from-below">
+      Từ năm 1858 đến đầu thế kỷ XX, các phong trào đấu tranh yêu nước liên tục nổ ra
+      theo hai khuynh hướng chính — phong kiến và dân chủ tư sản — nhưng đều thất bại.
+      Nhấn vào từng phong trào để xem chi tiết.
+    </p>
+
+    <div class="tendency-tabs">
+      <button class="tab-btn active" data-tab="pk">Khuynh hướng Phong kiến</button>
+      <button class="tab-btn" data-tab="dcts">Khuynh hướng Dân chủ Tư sản</button>
+    </div>
+
+    <!-- TAB: PHONG KIẾN -->
+    <div class="tab-panel active" id="tab-pk">
+      <div
+        style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.25rem; margin-bottom: 1.5rem;"
+        class="reveal from-below">
+        <div style="text-align: center;">
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWMwLr29_JxlG-fUhbOY5b5iOvJ5kxvaOu0qWlDl_s4qvLBQMkA6M-4WY&s=10"
+            alt="Ảnh Khởi nghĩa Trương Định & Nguyễn Trung Trực"
+            style="border-radius: var(--r); border: 1px solid var(--border-g); width: 100%; aspect-ratio: 4/3; object-fit: cover;">
+          <div
+            style="font-family: 'Space Mono', monospace; font-size: .75rem; color: var(--tx-s); margin-top: .6rem; line-height: 1.4;">
+            Khởi nghĩa Trương Định &amp; Nguyễn Trung Trực</div>
+        </div>
+        <div style="text-align: center;">
+          <img
+            src="https://file3.qdnd.vn/data/images/0/2021/12/28/lainguyenthang/grab2f9b9chan_dung_phan_dinh_phung_1600x800.jpg?dpi=150&quality=100&w=870"
+            alt="Ảnh Khởi nghĩa Phan Đình Phùng"
+            style="border-radius: var(--r); border: 1px solid var(--border-g); width: 100%; aspect-ratio: 4/3; object-fit: cover;">
+          <div
+            style="font-family: 'Space Mono', monospace; font-size: .75rem; color: var(--tx-s); margin-top: .6rem; line-height: 1.4;">
+            Phan Đình Phùng</div>
+        </div>
+        <div style="text-align: center;">
+          <img src="https://baotanglichsu.vn/DataFiles/News/Tintuc_cgs_vn_2013102911h3m55s.jpg"
+            alt="Ảnh Khởi nghĩa Hoàng Hoa Thám"
+            style="border-radius: var(--r); border: 1px solid var(--border-g); width: 100%; aspect-ratio: 4/3; object-fit: cover;">
+          <div
+            style="font-family: 'Space Mono', monospace; font-size: .75rem; color: var(--tx-s); margin-top: .6rem; line-height: 1.4;">
+            Khởi nghĩa Hoàng Hoa Thám</div>
+        </div>
+      </div>
+      <div class="phong-trao-grid">
+
+        <div class="pt-card" onclick="toggleCard(this)">
+          <div class="pt-header">
+            <div>
+              <div class="pt-name">Khởi nghĩa Trương Định &amp; Nguyễn Trung Trực</div>
+              <div class="pt-years">Miền Nam · 1858–1868</div>
+            </div>
+            <div class="pt-expand-icon">▾</div>
+          </div>
+          <div class="pt-body">
+            <div class="pt-body-inner">
+              <p><span class="pt-label">Lãnh đạo: </span>Trương Định, Nguyễn Trung Trực</p>
+              <p><span class="pt-label">Địa bàn: </span>Miền Nam Việt Nam</p>
+              <p>Các cuộc khởi nghĩa tuy rất anh dũng nhưng cuối cùng đều thất bại. Chứng tỏ giai cấp phong kiến và hệ
+                tư tưởng của nó đã suy tàn, bất lực trước nhiệm vụ bảo vệ độc lập dân tộc.</p>
+              <span class="fail-tag">✗ Thất bại</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="pt-card" onclick="toggleCard(this)">
+          <div class="pt-header">
+            <div>
+              <div class="pt-name">Khởi nghĩa Trần Tấn, Đặng Như Mai, Phan Đình Phùng</div>
+              <div class="pt-years">Miền Trung · 1874–1895</div>
+            </div>
+            <div class="pt-expand-icon">▾</div>
+          </div>
+          <div class="pt-body">
+            <div class="pt-body-inner">
+              <p><span class="pt-label">Lãnh đạo: </span>Trần Tấn, Đặng Như Mai, Phan Đình Phùng</p>
+              <p><span class="pt-label">Địa bàn: </span>Miền Trung Việt Nam</p>
+              <p>Các cuộc khởi nghĩa mang tinh thần yêu nước cao cả nhưng thiếu đường lối cách mạng đúng đắn và lực
+                lượng xã hội phù hợp với thời đại mới.</p>
+              <span class="fail-tag">✗ Thất bại</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="pt-card" onclick="toggleCard(this)">
+          <div class="pt-header">
+            <div>
+              <div class="pt-name">Khởi nghĩa Nguyễn Thiện Thuật, Đinh Công Tráng, Hoàng Hoa Thám</div>
+              <div class="pt-years">Miền Bắc · 1882–1913</div>
+            </div>
+            <div class="pt-expand-icon">▾</div>
+          </div>
+          <div class="pt-body">
+            <div class="pt-body-inner">
+              <p><span class="pt-label">Lãnh đạo: </span>Nguyễn Thiện Thuật, Phạm Bành &amp; Đinh Công Tráng, Nguyễn
+                Quang Bích, Hoàng Hoa Thám</p>
+              <p><span class="pt-label">Địa bàn: </span>Miền Bắc Việt Nam</p>
+              <p>Trong đó có những cuộc dưới ngọn cờ "Cần Vương" — giúp vua cứu nước — tuy anh dũng, nhưng cuối cùng đều
+                thất bại. Hệ tư tưởng phong kiến đã suy tàn, bất lực.</p>
+              <span class="fail-tag">✗ Thất bại</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="callout callout-red reveal from-below">
+        Các cuộc khởi nghĩa, trong đó có những cuộc dưới ngọn cờ "Cần Vương" tức giúp vua cứu nước,
+        tuy đều rất anh dũng, nhưng cuối cùng đều thất bại. Điều đó chứng tỏ nhân dân ta rất yêu nước,
+        song giai cấp phong kiến và hệ tư tưởng của nó đã suy tàn, bất lực trước nhiệm vụ bảo vệ độc lập dân tộc.
+        <cite>Giáo trình Tư tưởng Hồ Chí Minh, Chương II, Mục I.1.a, trang 19–20</cite>
+      </div>
+    </div>
+
+    <!-- TAB: DÂN CHỦ TƯ SẢN -->
+    <div class="tab-panel" id="tab-dcts">
+      <div
+        style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.25rem; margin-bottom: 1.5rem;"
+        class="reveal from-below">
+        <div style="text-align: center;">
+          <img src="https://baotanglichsu.vn/DataFiles/Uploaded/image/dong%20du/Anh-2t.jpg" alt="Ảnh Phong trào Đông Du"
+            style="border-radius: var(--r); border: 1px solid var(--border-g); width: 100%; aspect-ratio: 4/3; object-fit: cover;">
+          <div
+            style="font-family: 'Space Mono', monospace; font-size: .75rem; color: var(--tx-s); margin-top: .6rem; line-height: 1.4;">
+            Phong trào Đông Du</div>
+        </div>
+        <div style="text-align: center;">
+          <img src="https://thinhvuongvietnam.com/Content/UploadFiles/Thumb/2026/Quy1/424032026093323.jpg"
+            alt="Ảnh Phong trào Duy Tân"
+            style="border-radius: var(--r); border: 1px solid var(--border-g); width: 100%; aspect-ratio: 4/3; object-fit: cover;">
+          <div
+            style="font-family: 'Space Mono', monospace; font-size: .75rem; color: var(--tx-s); margin-top: .6rem; line-height: 1.4;">
+            Phong trào Duy Tân</div>
+        </div>
+        <div style="text-align: center;">
+          <img src="https://file3.qdnd.vn/data/images/0/2025/02/09/upload_2058/62.jpg" alt="Ảnh Khởi nghĩa Yên Bái"
+            style="border-radius: var(--r); border: 1px solid var(--border-g); width: 100%; aspect-ratio: 4/3; object-fit: cover;">
+          <div
+            style="font-family: 'Space Mono', monospace; font-size: .75rem; color: var(--tx-s); margin-top: .6rem; line-height: 1.4;">
+            Khởi nghĩa Yên Bái</div>
+        </div>
+      </div>
+      <div class="phong-trao-grid">
+
+        <div class="pt-card" onclick="toggleCard(this)">
+          <div class="pt-header">
+            <div>
+              <div class="pt-name">Phong trào Đông Du</div>
+              <div class="pt-years">1905 – 1909</div>
+            </div>
+            <div class="pt-expand-icon">▾</div>
+          </div>
+          <div class="pt-body">
+            <div class="pt-body-inner">
+              <p><span class="pt-label">Lãnh đạo: </span>Phan Bội Châu</p>
+              <p>Chủ trương đưa thanh niên sang Nhật Bản học tập, dựa vào Nhật để đánh Pháp. Phong trào thất bại khi
+                Nhật Bản trục xuất lưu học sinh Việt Nam theo yêu cầu của Pháp.</p>
+              <span class="fail-tag">✗ Thất bại</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="pt-card" onclick="toggleCard(this)">
+          <div class="pt-header">
+            <div>
+              <div class="pt-name">Phong trào Duy Tân</div>
+              <div class="pt-years">1906 – 1908</div>
+            </div>
+            <div class="pt-expand-icon">▾</div>
+          </div>
+          <div class="pt-body">
+            <div class="pt-body-inner">
+              <p><span class="pt-label">Lãnh đạo: </span>Phan Châu Trinh</p>
+              <p>Chủ trương cải cách văn hóa, giáo dục, kinh tế, dựa vào Pháp để cải lương. Phong trào bị thực dân Pháp
+                đàn áp, không đem lại độc lập thực sự.</p>
+              <span class="fail-tag">✗ Thất bại</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="pt-card" onclick="toggleCard(this)">
+          <div class="pt-header">
+            <div>
+              <div class="pt-name">Phong trào Đông Kinh Nghĩa Thục</div>
+              <div class="pt-years">3/1907 – 11/1907</div>
+            </div>
+            <div class="pt-expand-icon">▾</div>
+          </div>
+          <div class="pt-body">
+            <div class="pt-body-inner">
+              <p><span class="pt-label">Lãnh đạo: </span>Lương Văn Can, Nguyễn Quyền và một số nhân sĩ</p>
+              <p>Mở trường dạy học theo lối mới, khuyến khích tân học, canh nông, thực nghiệp. Bị thực dân Pháp đóng cửa
+                sau chưa đầy một năm hoạt động.</p>
+              <span class="fail-tag">✗ Thất bại</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="pt-card" onclick="toggleCard(this)">
+          <div class="pt-header">
+            <div>
+              <div class="pt-name">Phong trào chống đi phu, chống sưu thuế</div>
+              <div class="pt-years">Trung Kỳ · 1908</div>
+            </div>
+            <div class="pt-expand-icon">▾</div>
+          </div>
+          <div class="pt-body">
+            <div class="pt-body-inner">
+              <p><span class="pt-label">Địa bàn: </span>Trung Kỳ (miền Trung Việt Nam)</p>
+              <p>Phong trào quần chúng tự phát chống lại các chính sách đàn áp của thực dân Pháp. Bị đàn áp đẫm máu.</p>
+              <span class="fail-tag">✗ Thất bại</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="pt-card" onclick="toggleCard(this)">
+          <div class="pt-header">
+            <div>
+              <div class="pt-name">Khởi nghĩa Yên Bái (Việt Nam Quốc dân Đảng)</div>
+              <div class="pt-years">9-2-1930</div>
+            </div>
+            <div class="pt-expand-icon">▾</div>
+          </div>
+          <div class="pt-body">
+            <div class="pt-body-inner">
+              <p><span class="pt-label">Lãnh đạo: </span>Nguyễn Thái Học, Phạm Tuấn Tài, Phó Đức Chính</p>
+              <p><span class="pt-label">Thành lập VNQDĐ: </span>25-12-1927 (xu hướng cách mạng dân chủ tư sản, đại diện
+                giai cấp tư sản dân tộc)</p>
+              <p>Khởi nghĩa nổ ra đêm 9-2-1930 ở Yên Bái, Phú Thọ, Hải Dương, Thái Bình; riêng tại Hà Nội đã tổ chức ném
+                bom vào Sở Mật thám, Sở Cảnh sát. Phương châm: <em>"Không thành công cũng thành nhân"</em>. Nguyễn Thái
+                Học cùng 12 đồng chí bị xử tử tại Yên Bái. Khi lên máy chém, họ hô to: <em>"Việt Nam vạn tuế!"</em></p>
+              <span class="fail-tag">✗ Thất bại</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="callout callout-red reveal from-below">
+        Nguyên nhân sâu xa là giai cấp tư sản Việt Nam còn non yếu. Nguyên nhân trực tiếp là các tổ chức
+        và người lãnh đạo của các phong trào đó chưa có đường lối và phương pháp cách mạng đúng đắn.
+        <cite>Giáo trình Tư tưởng Hồ Chí Minh, Chương II, Mục I.1.a, trang 20–21</cite>
+      </div>
+    </div>
+
+    <div class="crisis-box reveal from-below">
+      <h3>Khủng hoảng đường lối cứu nước sâu sắc</h3>
+      <p>
+        Tinh thần yêu nước vẫn sục sôi trong lòng nhân dân. Song, cuộc khủng hoảng về đường lối
+        cứu nước diễn ra sâu sắc. Xuất hiện câu hỏi từ thực tiễn đặt ra là:
+      </p>
+      <p
+        style="margin-top:.75rem;color:var(--tx);font-family:'Playfair Display',serif;font-style:italic;font-size:1.05rem;max-width:none;">
+        "Cứu nước bằng con đường nào để có thể đi đến thắng lợi?"
+      </p>
+      <p style="font-family:'Space Mono',monospace;font-size:.65rem;color:var(--tx-m);margin-top:.5rem;max-width:none;">
+        — Giáo trình Tư tưởng Hồ Chí Minh, Chương II, Mục I.1.a, trang 21
+      </p>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- ══════════════════════════════════════════ TẦNG 3 -->
+  <section class="section" id="tang3">
+    <div class="eyebrow">Tầng nguyên nhân thứ ba</div>
+    <span class="section-number">03</span>
+    <h2>Điều kiện nội tại mới: Giai cấp Công nhân xuất hiện</h2>
+
+    <p class="reveal from-below">
+      Trong bối cảnh đó, sự ra đời của giai cấp mới là <strong>giai cấp công nhân</strong> và phong trào
+      đấu tranh của giai cấp công nhân Việt Nam đã làm cho cuộc đấu tranh giải phóng dân tộc xuất hiện
+      dấu hiệu mới của một thời đại mới sắp ra đời.
+    </p>
+
+    <p class="reveal from-below">
+      Cuối thế kỷ XIX, ở Việt Nam đã có công nhân, nhưng lúc đó mới chỉ là một lực lượng ít ỏi,
+      không ổn định. Đầu thế kỷ XX, công nhân phát triển hơn và trở thành một giai cấp ngay
+      trước <strong>Chiến tranh thế giới thứ nhất (1914–1918)</strong>.
+    </p>
+
+    <div class="reveal from-below" style="margin: 1.5rem 0; text-align: center;">
+      <img src="https://cdn.accgroup.vn/wp-content/uploads/2022/10/Giai-cap-cong-nhan-Viet-Nam-ra-doi-khi-nao-1.jpg"
+        alt="Ảnh giai cấp công nhân"
+        style="border-radius: var(--r); border: 1px solid var(--border-g); max-width: 100%;">
+      <div
+        style="font-family: 'Space Mono', monospace; font-size: .75rem; color: var(--tx-s); margin-top: .6rem; line-height: 1.4;">
+        Giai cấp công nhân Việt Nam đầu thế kỷ XX</div>
+    </div>
+
+    <h3 class="reveal from-below" style="margin-top:1.5rem;margin-bottom:1rem;">
+      Ba tầng áp bức đè lên giai cấp công nhân
+    </h3>
+
+    <div class="pressure-stack reveal from-below">
+      <div class="pressure-item">
+        <div class="p-num">Tầng 1</div>
+        <div class="p-name">Thực dân (Chính trị)</div>
+      </div>
+      <div class="pressure-arrow">↕</div>
+      <div class="pressure-item">
+        <div class="p-num">Tầng 2</div>
+        <div class="p-name">Tư bản (Kinh tế)</div>
+      </div>
+      <div class="pressure-arrow">↕</div>
+      <div class="pressure-item">
+        <div class="p-num">Tầng 3</div>
+        <div class="p-name">Phong kiến (Xã hội)</div>
+      </div>
+    </div>
+
+    <p class="reveal from-below" style="margin-top:1.25rem;">
+      Họ sớm vùng dậy đấu tranh chống lại giới chủ. Từ hình thức đấu tranh thô sơ như đốt lán trại,
+      bỏ trốn tập thể, họ đã nhanh chóng tiến tới đình công, bãi công.
+    </p>
+
+    <div class="callout reveal from-below">
+      "Chỉ có giai cấp công nhân là dũng cảm nhất, cách mạng nhất, luôn luôn gan góc đương đầu
+      với bọn đế quốc thực dân."
+      <cite>Hồ Chí Minh: Toàn tập, Nxb Chính trị quốc gia, Hà Nội, 2011, t.12, tr.407</cite>
+    </div>
+
+    <p class="reveal from-below">
+      Phong trào công nhân và các phong trào yêu nước Việt Nam đầu thế kỷ XX là điều kiện thuận lợi
+      để chủ nghĩa Mác–Lênin xâm nhập, truyền bá vào đất nước ta. Chính Hồ Chí Minh là một người đã
+      dày công truyền bá chủ nghĩa Mác–Lênin vào phong trào công nhân và phong trào yêu nước Việt Nam.
+    </p>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- ══════════════════════════════════════════ TẦNG 4 -->
+  <section class="section" id="tang4">
+    <div class="eyebrow">Tầng nguyên nhân thứ tư</div>
+    <span class="section-number">04</span>
+    <h2>Thế giới thay đổi: Thời đại mới mở ra lối thoát</h2>
+
+    <p class="reveal from-below">
+      Vào cuối thế kỷ XIX, đầu thế kỷ XX, chủ nghĩa tư bản trên thế giới đã phát triển từ
+      giai đoạn tự do cạnh tranh sang <strong>giai đoạn đế quốc chủ nghĩa</strong>. Phần lớn
+      các nước châu Á, châu Phi và khu vực Mỹ Latinh đã trở thành thuộc địa và phụ thuộc.
+    </p>
+
+    <div class="callout reveal from-below">
+      Một số nước đế quốc: Anh, Pháp, Mỹ, Tây Ban Nha, Ý, Đức, Nga, Nhật Bản, Bỉ, Bồ Đào Nha, Hà Lan
+      đã chi phối toàn bộ tình hình thế giới.
+      <cite>Giáo trình Tư tưởng Hồ Chí Minh, Chương II, Mục I.1.b, trang 21</cite>
+    </div>
+
+    <h3 class="reveal from-below" style="margin-top:1.5rem;margin-bottom:1rem;">Ba mâu thuẫn gay gắt của thời đại</h3>
+    <ul class="contradiction-list reveal from-below" style="margin-bottom:1.5rem;">
+      <li>Giai cấp tư sản &nbsp;⟷&nbsp; Giai cấp vô sản ở các nước tư bản</li>
+      <li>Các nước đế quốc &nbsp;⟷&nbsp; Nhau (tranh giành thuộc địa)</li>
+      <li>Các dân tộc thuộc địa &amp; phụ thuộc &nbsp;⟷&nbsp; Chủ nghĩa đế quốc</li>
+    </ul>
+
+    <h3 class="reveal from-below" style="margin-bottom:1rem;">Những sự kiện then chốt của thời đại</h3>
+    <div class="world-events reveal from-below">
+      <div class="we-item">
+        <div class="we-year">1917</div>
+        <div class="we-content">
+          <h4>Cách mạng Tháng Mười Nga thắng lợi</h4>
+          <p>Thắng lợi đầu tiên của chủ nghĩa Mác–Lênin ở một nước lớn rộng một phần sáu thế giới.
+            Đánh đổ giai cấp tư sản và giai cấp địa chủ phong kiến, lập nên một xã hội mới — xã hội xã hội chủ nghĩa.
+            Mở ra thời đại quá độ từ CNTB lên CNXH trên phạm vi toàn thế giới;
+            <strong>mở ra con đường giải phóng cho các dân tộc bị áp bức trên thế giới.</strong>
+          </p>
+          <div style="margin-top: 1rem;">
+            <img
+              src="https://media.baobinhphuoc.com.vn/upload/news//11_2022/cach_mang_thang_muoi_nga_dan_duong_cho_cach_mang_viet_nam_22191506112022.jpg"
+              alt="Ảnh Cách mạng Tháng Mười Nga"
+              style="border-radius: var(--r); border: 1px solid var(--border-g); width: 100%; max-width: 380px; aspect-ratio: 16/9; object-fit: cover;">
+            <div
+              style="font-family: 'Space Mono', monospace; font-size: .75rem; color: var(--tx-s); margin-top: .6rem; line-height: 1.4; max-width: 380px;">
+              Cách mạng Tháng Mười Nga (1917)</div>
+          </div>
+        </div>
+      </div>
+      <div class="we-item">
+        <div class="we-year">2·3·1919</div>
+        <div class="we-content">
+          <h4>Quốc tế Cộng sản ra đời tại Mátxcơva</h4>
+          <p>Trở thành Bộ tham mưu, lãnh đạo phong trào cách mạng thế giới. Dưới sự lãnh đạo của Lênin,
+            Quốc tế Cộng sản đẩy mạnh việc truyền bá chủ nghĩa Mác–Lênin và kinh nghiệm Cách mạng Tháng Mười
+            Nga ra khắp thế giới, thúc đẩy sự ra đời và hoạt động của các đảng cộng sản ở nhiều nước.</p>
+          <div style="margin-top: 1rem;">
+            <img src="https://imgnvsk.vnanet.vn/mediaupload/content/2023/8/15/984-ttxvn_2004lenin1.jpg"
+              alt="Ảnh Quốc tế Cộng sản"
+              style="border-radius: var(--r); border: 1px solid var(--border-g); width: 100%; max-width: 380px; aspect-ratio: 16/9; object-fit: cover;">
+            <div
+              style="font-family: 'Space Mono', monospace; font-size: .75rem; color: var(--tx-s); margin-top: .6rem; line-height: 1.4; max-width: 380px;">
+              Đại hội thành lập Quốc tế Cộng sản (1919)</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="callout reveal from-below">
+      Cách mạng Tháng Mười Nga thắng lợi đã mở ra một thời đại mới trong lịch sử loài người —
+      thời đại quá độ từ chủ nghĩa tư bản lên chủ nghĩa xã hội trên phạm vi toàn thế giới,
+      mở ra con đường giải phóng cho các dân tộc bị áp bức trên thế giới.
+      <cite>Giáo trình Tư tưởng Hồ Chí Minh, Chương II, Mục I.1.b, trang 22</cite>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- ══════════════════════════════════════════ HỘI TỤ NHÂN QUẢ -->
+  <section class="section" id="hoitu">
+    <div class="eyebrow">Phân tích tổng hợp</div>
+    <span class="section-number">05</span>
+    <h2>Hội tụ nhân quả: Tại sao con đường mới là tất yếu?</h2>
+
+    <p class="reveal from-below">
+      Chuỗi nhân quả không phải là một đường thẳng đơn giản. Đây là sự <strong>hội tụ của bốn dòng chảy lịch sử</strong>
+      cùng lúc: áp bức cấu trúc, bế tắc của các con đường cũ, sự xuất hiện của lực lượng xã hội mới,
+      và luồng gió thời đại từ bên ngoài. Không có yếu tố nào đơn lẻ là đủ; chính sự hội tụ của
+      cả bốn tạo nên tính tất yếu lịch sử.
+    </p>
+
+    <div class="causal-diagram reveal from-below">
+      <div class="causal-inner">
+        <!-- Row 1: 4 causes -->
+        <div class="causal-row">
+          <div class="causal-box gold-border">
+            <div class="cb-label">Nguyên nhân nền</div>
+            <div class="cb-title">Pháp xâm lược &amp; Cơ cấu xã hội Việt Nam biến đổi sâu sắc</div>
+          </div>
+          <div class="causal-box red-border">
+            <div class="cb-label">Nguyên nhân trực tiếp</div>
+            <div class="cb-title">Cả hai khuynh hướng phong kiến và tư sản đều thất bại</div>
+          </div>
+        </div>
+        <div class="causal-row">
+          <div class="causal-box gold-border">
+            <div class="cb-label">Điều kiện nội tại</div>
+            <div class="cb-title">Giai cấp công nhân xuất hiện — lực lượng cách mạng mới</div>
+          </div>
+          <div class="causal-box gold-border">
+            <div class="cb-label">Điều kiện thời đại</div>
+            <div class="cb-title">CM Tháng Mười Nga 1917 — Quốc tế Cộng sản 1919</div>
+          </div>
+        </div>
+        <!-- Arrows -->
+        <div class="causal-arrows">
+          <div class="arrow-track">
+            <div class="arrow-line"></div>
+            <div class="arrow-tip">↓</div>
+          </div>
+          <div class="arrow-track">
+            <div class="arrow-line"></div>
+            <div class="arrow-tip">↓</div>
+          </div>
+        </div>
+        <!-- Crisis -->
+        <div class="causal-center">
+          <h3>Khủng hoảng đường lối cứu nước sâu sắc</h3>
+          <p>"Cứu nước bằng con đường nào để có thể đi đến thắng lợi?"</p>
+        </div>
+        <!-- Final arrow -->
+        <div class="causal-final-arrow">↓</div>
+        <!-- Result -->
+        <div class="causal-result">
+          <h3>Yêu cầu lịch sử tất yếu</h3>
+          <p>Phải tìm một con đường mới — vượt qua cả tư tưởng phong kiến lẫn dân chủ tư sản —
+            phù hợp với thời đại cách mạng vô sản đang mở ra.</p>
+        </div>
+      </div>
+    </div>
+
+    <p class="reveal from-below" style="margin-top:1.5rem;">
+      <strong style="color:var(--gold);">Lưu ý về nhân quả (Causal Caution):</strong> Không phải
+      Cách mạng Tháng Mười Nga "ép buộc" Việt Nam chọn con đường vô sản. Đó là sự <em>lựa chọn có
+        phê phán</em> của Hồ Chí Minh — trên cơ sở phân tích thực tiễn và so sánh các con đường đã thất bại.
+      Yếu tố bên ngoài (thời đại) chỉ mở ra khả năng; yếu tố bên trong (khủng hoảng đường lối,
+      giai cấp công nhân) tạo nên nhu cầu; sự kết hợp hai chiều đó mới tạo ra tính tất yếu.
+    </p>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- ══════════════════════════════════════════ KẾT LUẬN -->
+  <section class="section" id="ketluan">
+    <div class="eyebrow">Điểm kết thúc của bối cảnh</div>
+    <span class="section-number">06</span>
+    <h2>5-6-1911: Bối cảnh chuyển hoá thành hành động</h2>
+
+    <p class="reveal from-below">
+      Tuy rất khâm phục tinh thần yêu nước của các vị tiền bối cách mạng nổi tiếng như
+      Phan Bội Châu, Phan Châu Trinh, Hoàng Hoa Thám, nhưng Hồ Chí Minh đã sáng suốt
+      phê phán, không tán thành, không đi theo các phương pháp và khuynh hướng cứu nước
+      của các vị đó.
+    </p>
+
+    <div class="callout reveal from-below">
+      Hồ Chí Minh muốn tìm hiểu những gì ẩn giấu sau sức mạnh của kẻ thù và học hỏi
+      kinh nghiệm cách mạng trên thế giới.
+      <cite>Giáo trình Tư tưởng Hồ Chí Minh, Chương II, Mục II.1, trang 28</cite>
+    </div>
+
+    <div class="kl-quote-box reveal from-below">
+      <div class="kq-date">Ngày 5 tháng 6 năm 1911</div>
+      <p class="kq-text">
+        Hồ Chí Minh đi ra nước ngoài tìm con đường cứu nước, cứu dân.
+      </p>
+    </div>
+
+    <div class="reveal from-below" style="margin: 1.5rem 0; text-align: center;">
+      <img src="https://file.qdnd.vn/data/images/0/2021/05/28/tranyen/bh.jpg?dpi=150&quality=100&w=575"
+        alt="Ảnh Bác Hồ ra đi tìm đường cứu nước"
+        style="border-radius: var(--r); border: 1px solid var(--border-g); max-width: 100%;">
+      <div
+        style="font-family: 'Space Mono', monospace; font-size: .75rem; color: var(--tx-s); margin-top: .6rem; line-height: 1.4;">
+        Bến Nhà Rồng - Nơi Nguyễn Tất Thành ra đi tìm đường cứu nước (5/6/1911)</div>
+    </div>
+
+    <p class="reveal from-below">
+      Đây là <strong>điểm hội tụ tự nhiên</strong> của toàn bộ bối cảnh lịch sử đã được phân tích:
+      bế tắc trong nước cộng với thời đại mới mở ra bên ngoài đã thôi thúc một con người cụ thể
+      đưa ra một quyết định cụ thể. Bối cảnh không tự động tạo ra kết quả — nó tạo ra điều kiện;
+      hành động của lãnh tụ là khâu chuyển hoá điều kiện thành hiện thực.
+    </p>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- ══════════════════════════════════════════ TƯƠNG TÁC -->
+  <section class="section-full" id="tuongtac">
+    <div class="inner">
+      <div class="eyebrow">Kiểm tra &amp; Suy ngẫm</div>
+      <h2>Tương tác</h2>
+
+      <div class="interact-tabs">
+        <button class="itab-btn active" onclick="switchItab('quiz', this)">Trắc nghiệm kiến thức</button>
+        <button class="itab-btn" onclick="switchItab('openq', this)">Câu hỏi mở</button>
+      </div>
+
+      <!-- QUIZ -->
+      <div class="itab-panel active" id="itab-quiz">
+        <div class="quiz-progress-bar">
+          <div class="quiz-progress-fill" id="qpfill" style="width:0%"></div>
+        </div>
+
+        <div id="quiz-main">
+          <div class="quiz-q-num" id="q-num">Câu 1 / 5</div>
+          <div class="quiz-question" id="q-text"></div>
+          <div class="quiz-options" id="q-opts"></div>
+          <div class="quiz-feedback" id="q-feedback"></div>
+          <div class="quiz-nav">
+            <button class="quiz-btn" id="q-next" onclick="nextQuestion()" disabled>Câu tiếp theo →</button>
+            <span style="font-family:'Space Mono',monospace;font-size:.68rem;color:var(--tx-m)"
+              id="q-score-mini"></span>
+          </div>
+        </div>
+
+        <div class="quiz-result" id="quiz-result">
+          <div class="qr-score" id="qr-score-txt"></div>
+          <p id="qr-msg"></p>
+          <button class="quiz-retry" onclick="initQuiz()">Làm lại bài kiểm tra</button>
+        </div>
+      </div>
+
+      <!-- OPEN QUESTION -->
+      <div class="itab-panel" id="itab-openq">
+        <p class="open-q-text">
+          Nếu Cách mạng Tháng Mười Nga không thắng lợi vào năm 1917, liệu phong trào
+          giải phóng dân tộc Việt Nam có tìm ra con đường cách mạng vô sản không?
+          Tại sao?
+        </p>
+        <p class="open-q-hint">
+          Gợi ý: Hãy cân nhắc vai trò của từng tầng nguyên nhân — yếu tố nào là nội tại,
+          yếu tố nào đến từ thời đại bên ngoài? Điều gì xảy ra nếu thiếu đi một trong hai?
+        </p>
+        <textarea class="open-q-area" id="oq-area" placeholder="Viết suy nghĩ của bạn tại đây..."></textarea>
+        <div class="open-q-actions">
+          <button class="oq-copy-btn" onclick="copyOQ()">Sao chép phản hồi</button>
+          <span class="oq-copy-note" id="oq-note">Văn bản sẽ được sao chép vào clipboard</span>
+        </div>
+
+        <div class="key-points">
+          <h4>Các luận điểm cần cân nhắc</h4>
+          <ul>
+            <li>Bốn tầng nguyên nhân — yếu tố nào là bắt buộc, yếu tố nào có thể thay thế?</li>
+            <li>Giai cấp công nhân Việt Nam đã hình thành — liệu điều đó đủ để tự tìm ra CN Mác–Lênin không?</li>
+            <li>Khủng hoảng đường lối đã có — nhưng không có gương mẫu từ Nga, hướng đi tiếp theo là gì?</li>
+            <li>Vai trò của cá nhân lãnh tụ: HCM là người "chuyển hoá" bối cảnh — nhân tố chủ quan có thể bù cho thiếu
+              hụt thời đại không?</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- ══════════════════════════════════════════ NGUỒN -->
+  <section class="section" id="nguon">
+    <div class="eyebrow">Trích dẫn &amp; Tài liệu tham khảo</div>
+    <h2>Nguồn</h2>
+    <p style="color:var(--tx-s);font-size:.9rem;">Toàn bộ nội dung trong sản phẩm này được trích xuất trực tiếp từ các
+      tài liệu chính thống dưới đây. Không sử dụng nguồn ngoài danh sách này.</p>
+
+    <ul class="source-list">
+      <li>
+        <span class="src-id">[01]</span>
+        <span>Bộ Giáo dục và Đào tạo: <em>Giáo trình Tư tưởng Hồ Chí Minh</em>, Chương II — Cơ sở, quá trình hình thành
+          và phát triển tư tưởng Hồ Chí Minh, Mục I.1.a (tr.19–21), Mục I.1.b (tr.21–22), Mục II.1 (tr.28), Nxb Chính
+          trị quốc gia Sự thật.</span>
+      </li>
+      <li>
+        <span class="src-id">[02]</span>
+        <span>Hồ Chí Minh: <em>Toàn tập</em>, t.12, tr.407 — trích dẫn về giai cấp công nhân, Nxb Chính trị quốc gia, Hà
+          Nội, 2011.</span>
+      </li>
+      <li>
+        <span class="src-id">[03]</span>
+        <span>Đảng Cộng sản Việt Nam: <em>Văn kiện Đại hội đại biểu toàn quốc lần thứ XII</em>, Nxb Chính trị quốc gia,
+          Hà Nội, 2016.</span>
+      </li>
+      <li>
+        <span class="src-id">[04]</span>
+        <span>Học viện Chính trị quốc gia Hồ Chí Minh — GS. Song Thành (Chủ biên): <em>Hồ Chí Minh — Tiểu sử</em>, Nxb
+          Lý luận chính trị, Hà Nội, 2006.</span>
+      </li>
+    </ul>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- ══════════════════════════════════════════ PHỤ LỤC AI -->
+  <!-- <section class="section" id="phuluc">
+    <div class="eyebrow">Minh bạch ứng dụng AI</div>
+    <h2>Phụ lục AI</h2>
+    <p style="color:var(--tx-s);font-size:.9rem;margin-bottom:1.25rem;">
+      Sản phẩm này được tạo ra với sự hỗ trợ của Claude (Anthropic). Dưới đây là toàn bộ
+      quy trình sử dụng AI, đảm bảo tính liêm chính học thuật theo quy định của Bộ môn.
+    </p>
+
+    <ul class="ai-process-list">
+      <li>
+        <span class="ai-step">B01</span>
+        <span><strong style="color:var(--tx);">Xác định phạm vi nội dung:</strong> AI hỗ trợ phân tích yêu cầu đề bài và
+          xác định các mục trong Chương II cần trình bày (I.1.a, I.1.b, phần cuối II.1). Người học tự đưa ra quyết định
+          và xác nhận phạm vi.</span>
+      </li>
+      <li>
+        <span class="ai-step">B02</span>
+        <span><strong style="color:var(--tx);">Trích xuất nội dung giáo trình:</strong> AI được cung cấp file PDF giáo
+          trình gốc và hỗ trợ trích xuất nội dung. <em>Mọi thông tin được kiểm chứng lại bằng cách đối chiếu trực tiếp
+            với trang tương ứng trong giáo trình in.</em></span>
+      </li>
+      <li>
+        <span class="ai-step">B03</span>
+        <span><strong style="color:var(--tx);">Lập cấu trúc chuỗi nhân quả:</strong> AI hỗ trợ phân tích và đề xuất cách
+          tổ chức bốn tầng nguyên nhân. Người học phê bình và bổ sung mắt xích "giai cấp công nhân xuất hiện" còn thiếu
+          trong phác thảo ban đầu.</span>
+      </li>
+      <li>
+        <span class="ai-step">B04</span>
+        <span><strong style="color:var(--tx);">Thiết kế &amp; Lập trình:</strong> AI tạo toàn bộ code
+          HTML/CSS/JavaScript cho trang web. Người học kiểm tra tính chính xác của nội dung hiển thị, so sánh với giáo
+          trình gốc, và yêu cầu điều chỉnh khi cần.</span>
+      </li>
+      <li>
+        <span class="ai-step">B05</span>
+        <span><strong style="color:var(--tx);">Kiểm chứng nội dung:</strong> Tất cả ngày tháng (1858, 1905–1909,
+          1906–1908, 3/1907–11/1907, 1908, 25-12-1927, 9-2-1930, 1917, 2-3-1919, 5-6-1911), tên nhân vật, và trích dẫn
+          được xác minh trực tiếp từ giáo trình. Không có thông tin nào được tạo ra từ trí nhớ của AI mà không có
+          nguồn.</span>
+      </li>
+      <li>
+        <span class="ai-step">B06</span>
+        <span><strong style="color:var(--tx);">Nội dung không dùng AI tạo:</strong> Phân tích tổng hợp tại mục "Hội tụ
+          nhân quả" (Section 05) và phần lập luận về Causal Caution thể hiện quan điểm phân tích riêng của người học, AI
+          chỉ hỗ trợ diễn đạt sau khi ý tưởng được người học đề xuất.</span>
+      </li>
+    </ul>
+
+    <p
+      style="font-family:'Space Mono',monospace;font-size:.68rem;color:var(--tx-m);margin-top:1.25rem;line-height:1.7;">
+      Công cụ AI sử dụng: Claude Sonnet (Anthropic) · Mô hình: claude-sonnet-4-6<br>
+      Người học chịu hoàn toàn trách nhiệm về tính chính xác và tính chính trực của nội dung trong sản phẩm này.
+    </p>
+  </section> -->
+
+  <footer>
+    HCM202 · HCM-SPST-C2-04 · Chương II — Cơ sở, quá trình hình thành và phát triển Tư tưởng Hồ Chí Minh
+    <span style="margin:0 .75rem;color:var(--border-g)">·</span>
+    Tư tưởng Hồ Chí Minh · Fall 2026
+  </footer>
+
+  <script>
+    // ── QUIZ DATA ──
+    const questions = [
+      {
+        q: "Từ năm nào đế quốc Pháp bắt đầu tiến hành xâm lược Việt Nam?",
+        opts: ["1848", "1858", "1868", "1878"],
+        ans: 1,
+        explain: "Từ năm 1858, đế quốc Pháp bắt đầu tiến hành xâm lược Việt Nam (Giáo trình Ch.II, tr.19)."
+      },
+      {
+        q: "Phong trào Đông Du (1905–1909) do ai khởi xướng?",
+        opts: ["Phan Châu Trinh", "Hoàng Hoa Thám", "Phan Bội Châu", "Lương Văn Can"],
+        ans: 2,
+        explain: "Phong trào Đông Du do Phan Bội Châu khởi xướng (1905–1909) (Giáo trình Ch.II, tr.20)."
+      },
+      {
+        q: "Phong trào Đông Kinh Nghĩa Thục hoạt động trong khoảng thời gian nào?",
+        opts: ["1905 – 1907", "1906 – 1908", "3/1907 – 11/1907", "1908 – 1909"],
+        ans: 2,
+        explain: "Đông Kinh Nghĩa Thục do Lương Văn Can, Nguyễn Quyền khởi xướng, hoạt động từ 3-1907 đến 11-1907 (Giáo trình Ch.II, tr.20)."
+      },
+      {
+        q: "Quốc tế Cộng sản được thành lập vào ngày nào, ở đâu?",
+        opts: ["5-6-1911 tại Paris", "2-3-1919 tại Mátxcơva", "25-12-1927 tại Hà Nội", "9-2-1930 tại Yên Bái"],
+        ans: 1,
+        explain: "Ngày 2-3-1919, Quốc tế Cộng sản ra đời ở Mátxcơva, trở thành Bộ tham mưu lãnh đạo phong trào cách mạng thế giới (Giáo trình Ch.II, tr.22)."
+      },
+      {
+        q: "Ngày Hồ Chí Minh ra đi tìm đường cứu nước là ngày nào?",
+        opts: ["3-2-1930", "22-12-1944", "5-6-1911", "2-9-1945"],
+        ans: 2,
+        explain: "Ngày 5-6-1911, Hồ Chí Minh đi ra nước ngoài tìm con đường cứu nước, cứu dân (Giáo trình Ch.II, Mục II.1, tr.28)."
+      }
+    ];
+
+    let qIdx = 0, score = 0, answered = false;
+
+    function initQuiz() {
+      qIdx = 0; score = 0; answered = false;
+      document.getElementById('quiz-main').style.display = 'block';
+      document.getElementById('quiz-result').classList.remove('show');
+      document.getElementById('q-feedback').classList.remove('show', 'ok', 'no');
+      document.getElementById('q-next').disabled = true;
+      document.getElementById('q-score-mini').textContent = '';
+      renderQuestion();
+    }
+
+    function renderQuestion() {
+      const q = questions[qIdx];
+      document.getElementById('q-num').textContent = `Câu ${qIdx + 1} / ${questions.length}`;
+      document.getElementById('q-text').textContent = q.q;
+      document.getElementById('qpfill').style.width = `${(qIdx / questions.length) * 100}%`;
+      const keys = ['A', 'B', 'C', 'D'];
+      document.getElementById('q-opts').innerHTML = q.opts.map((o, i) =>
+        `<button class="quiz-opt" onclick="selectOpt(this,${i})" data-idx="${i}">
+       <span class="opt-key">${keys[i]}</span>${o}
+     </button>`
+      ).join('');
+      answered = false;
+      document.getElementById('q-next').disabled = true;
+      document.getElementById('q-next').textContent = qIdx === questions.length - 1 ? 'Xem kết quả →' : 'Câu tiếp theo →';
+      const fb = document.getElementById('q-feedback');
+      fb.classList.remove('show', 'ok', 'no');
+    }
+
+    function selectOpt(el, idx) {
+      if (answered) return;
+      answered = true;
+      const q = questions[qIdx];
+      const opts = document.querySelectorAll('.quiz-opt');
+      opts.forEach(o => o.disabled = true);
+      const fb = document.getElementById('q-feedback');
+      if (idx === q.ans) {
+        el.classList.add('correct');
+        score++;
+        fb.className = 'quiz-feedback show ok';
+        fb.textContent = '✓ Chính xác! ' + q.explain;
+      } else {
+        el.classList.add('wrong');
+        opts[q.ans].classList.add('correct');
+        fb.className = 'quiz-feedback show no';
+        fb.textContent = '✗ Chưa đúng. ' + q.explain;
+      }
+      document.getElementById('q-next').disabled = false;
+      document.getElementById('q-score-mini').textContent = `${score}/${qIdx + 1}`;
+    }
+
+    function nextQuestion() {
+      if (!answered) return;
+      qIdx++;
+      if (qIdx >= questions.length) {
+        showResult();
+      } else {
+        renderQuestion();
+      }
+    }
+
+    function showResult() {
+      document.getElementById('quiz-main').style.display = 'none';
+      document.getElementById('qpfill').style.width = '100%';
+      const res = document.getElementById('quiz-result');
+      res.classList.add('show');
+      document.getElementById('qr-score-txt').textContent = `${score}/${questions.length}`;
+      const msgs = [
+        'Hãy ôn lại nội dung giáo trình và thử lại nhé!',
+        'Bạn đã nắm được một số điểm. Đọc lại phần cơ sở thực tiễn trong Chương II.',
+        'Khá tốt! Một vài chi tiết cần xác nhận lại trong giáo trình.',
+        'Rất tốt! Bạn nắm vững hầu hết các mốc lịch sử quan trọng.',
+        'Xuất sắc! Bạn hiểu sâu toàn bộ bối cảnh lịch sử trong Chương II.'
+      ];
+      document.getElementById('qr-msg').textContent = msgs[score] || msgs[4];
+    }
+
+    function switchItab(id, btn) {
+      document.querySelectorAll('.itab-panel').forEach(p => p.classList.remove('active'));
+      document.querySelectorAll('.itab-btn').forEach(b => b.classList.remove('active'));
+      document.getElementById('itab-' + id).classList.add('active');
+      btn.classList.add('active');
+    }
+
+    function copyOQ() {
+      const txt = document.getElementById('oq-area').value.trim();
+      if (!txt) return;
+      navigator.clipboard.writeText(txt).then(() => {
+        const note = document.getElementById('oq-note');
+        note.textContent = '✓ Đã sao chép!';
+        note.classList.add('done');
+        setTimeout(() => { note.textContent = 'Văn bản sẽ được sao chép vào clipboard'; note.classList.remove('done'); }, 2000);
+      });
+    }
+
+    // ── CARD SYNC HEIGHT PER ROW ──
+    function syncCardHeights() {
+      document.querySelectorAll('.phong-trao-grid').forEach(grid => {
+        if (grid.offsetWidth === 0) return; // Bỏ qua nếu tab đang ẩn
+
+        const cards = Array.from(grid.querySelectorAll('.pt-card'));
+        const rows = {};
+
+        // Nhóm các thẻ theo vị trí top (tức là cùng một hàng ngang)
+        cards.forEach(card => {
+          const top = card.offsetTop;
+          if (!rows[top]) rows[top] = [];
+          rows[top].push(card);
+        });
+
+        // Tìm max height cho từng hàng và gán vào từng thẻ của hàng đó
+        Object.values(rows).forEach(rowCards => {
+          let maxBodyH = 0;
+          rowCards.forEach(card => {
+            const body = card.querySelector('.pt-body');
+            if (body && body.scrollHeight > maxBodyH) {
+              maxBodyH = body.scrollHeight;
+            }
+          });
+
+          if (maxBodyH > 0) {
+            rowCards.forEach(card => {
+              card.style.setProperty('--row-max-h', maxBodyH + 'px');
+            });
+          }
+        });
+      });
+    }
+    window.addEventListener('load', syncCardHeights);
+    window.addEventListener('resize', syncCardHeights);
+
+    // ── CARD TOGGLE ──
+    function toggleCard(card) {
+      card.classList.toggle('expanded');
+    }
+
+    // ── TAB TOGGLE ──
+    document.querySelectorAll('.tab-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const tab = btn.dataset.tab;
+        document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+        document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+        btn.classList.add('active');
+        document.getElementById('tab-' + tab).classList.add('active');
+        syncCardHeights(); // Cập nhật lại height khi chuyển tab (hiển thị grid mới)
+      });
+    });
+
+    // ── TIMELINE CLICK ──
+    document.querySelectorAll('.tl-item[data-section]').forEach(item => {
+      item.addEventListener('click', () => {
+        const target = document.getElementById(item.dataset.section);
+        if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      });
+    });
+
+    // ── PROGRESS NAV ──
+    const sections = ['hero', 'tang1', 'tang2', 'tang3', 'tang4', 'hoitu', 'ketluan', 'tuongtac', 'nguon'];
+    const dots = document.querySelectorAll('.pnav-dot');
+    dots.forEach(dot => {
+      dot.addEventListener('click', () => {
+        const t = document.getElementById(dot.dataset.target);
+        if (t) t.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      });
+    });
+    function updateNav() {
+      let current = 0;
+      sections.forEach((id, i) => {
+        const el = document.getElementById(id);
+        if (el && el.getBoundingClientRect().top <= 200) current = i;
+      });
+      dots.forEach((d, i) => d.classList.toggle('active', i === current));
+    }
+    window.addEventListener('scroll', updateNav, { passive: true });
+    updateNav();
+
+    // ── SCROLL REVEAL ──
+    if (window.matchMedia('(prefers-reduced-motion: no-preference)').matches) {
+      const revealEls = document.querySelectorAll('.reveal.from-below');
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(e => {
+          if (e.isIntersecting) {
+            e.target.classList.add('in-view');
+            observer.unobserve(e.target);
+          }
+        });
+      }, { threshold: 0.12 });
+      revealEls.forEach(el => observer.observe(el));
+    }
+
+    // ── THEME TOGGLE ──
+    function applyTheme(theme) {
+      document.documentElement.setAttribute('data-theme', theme);
+      const isDark = theme === 'dark';
+      document.getElementById('tt-icon').textContent = isDark ? '☀' : '☾';
+      document.getElementById('tt-label').textContent = isDark ? 'Sáng' : 'Tối';
+      localStorage.setItem('hcm-theme', theme);
+    }
+    function toggleTheme() {
+      const current = document.documentElement.getAttribute('data-theme') || 'dark';
+      applyTheme(current === 'dark' ? 'light' : 'dark');
+    }
+    // restore saved preference (default: dark)
+    (function () {
+      const saved = localStorage.getItem('hcm-theme') || 'dark';
+      applyTheme(saved);
+    })();
+
+    // ── INIT ──
+    initQuiz();
+    syncCardHeights(); // Chạy ngay lần đầu
+  </script>
+</body>
+
+</html>
