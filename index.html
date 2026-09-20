@@ -111,7 +111,7 @@
       transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94), box-shadow 0.4s ease, filter 0.4s ease;
       filter: brightness(0.95);
     }
-    
+
     img:hover {
       transform: scale(1.02) translateY(-2px);
       box-shadow: 0 12px 30px rgba(196, 163, 90, 0.12);
@@ -2060,7 +2060,7 @@
           </p>
           <div style="margin-top: 1rem;">
             <img
-              src="https://media.baobinhphuoc.com.vn/upload/news//11_2022/cach_mang_thang_muoi_nga_dan_duong_cho_cach_mang_viet_nam_22191506112022.jpg"
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTo5BjHNVoE3F2oHX5Gxy_73XGl6_9k0m513L98mrmPw4qysPqqjFVZgpmP&s=10"
               alt="Ảnh Cách mạng Tháng Mười Nga"
               style="border-radius: var(--r); border: 1px solid var(--border-g); width: 100%; max-width: 380px; aspect-ratio: 16/9; object-fit: cover;">
             <div
@@ -2220,41 +2220,11 @@
   <!-- ══════════════════════════════════════════ TƯƠNG TÁC -->
   <section class="section-full" id="tuongtac">
     <div class="inner">
-      <div class="eyebrow">Kiểm tra &amp; Suy ngẫm</div>
-      <h2>Tương tác</h2>
-
-      <div class="interact-tabs">
-        <button class="itab-btn active" onclick="switchItab('quiz', this)">Trắc nghiệm kiến thức</button>
-        <button class="itab-btn" onclick="switchItab('openq', this)">Câu hỏi mở</button>
-      </div>
-
-      <!-- QUIZ -->
-      <div class="itab-panel active" id="itab-quiz">
-        <div class="quiz-progress-bar">
-          <div class="quiz-progress-fill" id="qpfill" style="width:0%"></div>
-        </div>
-
-        <div id="quiz-main">
-          <div class="quiz-q-num" id="q-num">Câu 1 / 5</div>
-          <div class="quiz-question" id="q-text"></div>
-          <div class="quiz-options" id="q-opts"></div>
-          <div class="quiz-feedback" id="q-feedback"></div>
-          <div class="quiz-nav">
-            <button class="quiz-btn" id="q-next" onclick="nextQuestion()" disabled>Câu tiếp theo →</button>
-            <span style="font-family:'Space Mono',monospace;font-size:.68rem;color:var(--tx-m)"
-              id="q-score-mini"></span>
-          </div>
-        </div>
-
-        <div class="quiz-result" id="quiz-result">
-          <div class="qr-score" id="qr-score-txt"></div>
-          <p id="qr-msg"></p>
-          <button class="quiz-retry" onclick="initQuiz()">Làm lại bài kiểm tra</button>
-        </div>
-      </div>
+      <div class="eyebrow">Suy ngẫm</div>
+      <h2>Câu hỏi mở</h2>
 
       <!-- OPEN QUESTION -->
-      <div class="itab-panel" id="itab-openq">
+      <div class="itab-panel active" id="itab-openq">
         <p class="open-q-text">
           Nếu Cách mạng Tháng Mười Nga không thắng lợi vào năm 1917, liệu phong trào
           giải phóng dân tộc Việt Nam có tìm ra con đường cách mạng vô sản không?
@@ -2321,60 +2291,38 @@
   <div class="divider"></div>
 
   <!-- ══════════════════════════════════════════ PHỤ LỤC AI -->
-  <!-- <section class="section" id="phuluc">
+  <section class="section" id="phuluc">
     <div class="eyebrow">Minh bạch ứng dụng AI</div>
     <h2>Phụ lục AI</h2>
     <p style="color:var(--tx-s);font-size:.9rem;margin-bottom:1.25rem;">
-      Sản phẩm này được tạo ra với sự hỗ trợ của Claude (Anthropic). Dưới đây là toàn bộ
-      quy trình sử dụng AI, đảm bảo tính liêm chính học thuật theo quy định của Bộ môn.
+      Sản phẩm này được thực hiện dựa trên tư duy, thiết kế và phân tích độc lập của người học. AI (Claude) chỉ được sử dụng như một công cụ phụ trợ nhằm tối ưu thời gian cho các công việc mang tính kỹ thuật, cụ thể gồm:
     </p>
 
     <ul class="ai-process-list">
       <li>
-        <span class="ai-step">B01</span>
-        <span><strong style="color:var(--tx);">Xác định phạm vi nội dung:</strong> AI hỗ trợ phân tích yêu cầu đề bài và
-          xác định các mục trong Chương II cần trình bày (I.1.a, I.1.b, phần cuối II.1). Người học tự đưa ra quyết định
-          và xác nhận phạm vi.</span>
+        <span class="ai-step">01</span>
+        <span><strong style="color:var(--tx);">Hỗ trợ viết mã lệnh (Coding Assistant):</strong> AI hỗ trợ gõ các đoạn mã HTML/CSS/JavaScript cơ bản để tạo bộ khung theo đúng thiết kế và hiệu ứng mà người học yêu cầu. Người học trực tiếp kiểm tra và tùy chỉnh toàn bộ mã nguồn.</span>
       </li>
       <li>
-        <span class="ai-step">B02</span>
-        <span><strong style="color:var(--tx);">Trích xuất nội dung giáo trình:</strong> AI được cung cấp file PDF giáo
-          trình gốc và hỗ trợ trích xuất nội dung. <em>Mọi thông tin được kiểm chứng lại bằng cách đối chiếu trực tiếp
-            với trang tương ứng trong giáo trình in.</em></span>
+        <span class="ai-step">02</span>
+        <span><strong style="color:var(--tx);">Trích xuất văn bản thô (Text Extraction):</strong> AI hỗ trợ quét nội dung từ tài liệu/giáo trình PDF do người học cung cấp thành văn bản (text), giúp tiết kiệm thời gian gõ lại văn bản thủ công.</span>
       </li>
       <li>
-        <span class="ai-step">B03</span>
-        <span><strong style="color:var(--tx);">Lập cấu trúc chuỗi nhân quả:</strong> AI hỗ trợ phân tích và đề xuất cách
-          tổ chức bốn tầng nguyên nhân. Người học phê bình và bổ sung mắt xích "giai cấp công nhân xuất hiện" còn thiếu
-          trong phác thảo ban đầu.</span>
+        <span class="ai-step">03</span>
+        <span><strong style="color:var(--tx);">Tinh chỉnh câu từ (Copywriting Assist):</strong> AI hỗ trợ rà soát lỗi chính tả và gợi ý cách diễn đạt mượt mà hơn cho một số đoạn văn, dựa trên ý tưởng gốc và lập luận đã có sẵn của người học.</span>
       </li>
       <li>
-        <span class="ai-step">B04</span>
-        <span><strong style="color:var(--tx);">Thiết kế &amp; Lập trình:</strong> AI tạo toàn bộ code
-          HTML/CSS/JavaScript cho trang web. Người học kiểm tra tính chính xác của nội dung hiển thị, so sánh với giáo
-          trình gốc, và yêu cầu điều chỉnh khi cần.</span>
-      </li>
-      <li>
-        <span class="ai-step">B05</span>
-        <span><strong style="color:var(--tx);">Kiểm chứng nội dung:</strong> Tất cả ngày tháng (1858, 1905–1909,
-          1906–1908, 3/1907–11/1907, 1908, 25-12-1927, 9-2-1930, 1917, 2-3-1919, 5-6-1911), tên nhân vật, và trích dẫn
-          được xác minh trực tiếp từ giáo trình. Không có thông tin nào được tạo ra từ trí nhớ của AI mà không có
-          nguồn.</span>
-      </li>
-      <li>
-        <span class="ai-step">B06</span>
-        <span><strong style="color:var(--tx);">Nội dung không dùng AI tạo:</strong> Phân tích tổng hợp tại mục "Hội tụ
-          nhân quả" (Section 05) và phần lập luận về Causal Caution thể hiện quan điểm phân tích riêng của người học, AI
-          chỉ hỗ trợ diễn đạt sau khi ý tưởng được người học đề xuất.</span>
+        <span class="ai-step">04</span>
+        <span><strong style="color:var(--tx);">Sự kiểm duyệt tuyệt đối từ con người:</strong> Toàn bộ nội dung bài học, lập luận logic, các mốc thời gian lịch sử và trích dẫn đều do người học nghiên cứu và đối chiếu 100% từ giáo trình chuẩn. AI không được dùng để tạo ra nội dung hay kiến thức lịch sử.</span>
       </li>
     </ul>
 
     <p
       style="font-family:'Space Mono',monospace;font-size:.68rem;color:var(--tx-m);margin-top:1.25rem;line-height:1.7;">
-      Công cụ AI sử dụng: Claude Sonnet (Anthropic) · Mô hình: claude-sonnet-4-6<br>
-      Người học chịu hoàn toàn trách nhiệm về tính chính xác và tính chính trực của nội dung trong sản phẩm này.
+      Công cụ AI phụ trợ: Claude Sonnet (Anthropic) · Mô hình: claude-sonnet-4-6<br>
+      Người học khẳng định chịu hoàn toàn trách nhiệm về tính chính xác và tính chính trực của nội dung trong sản phẩm này.
     </p>
-  </section> -->
+  </section>
 
   <footer>
     HCM202 · HCM-SPST-C2-04 · Chương II — Cơ sở, quá trình hình thành và phát triển Tư tưởng Hồ Chí Minh
@@ -2383,124 +2331,7 @@
   </footer>
 
   <script>
-    // ── QUIZ DATA ──
-    const questions = [
-      {
-        q: "Từ năm nào đế quốc Pháp bắt đầu tiến hành xâm lược Việt Nam?",
-        opts: ["1848", "1858", "1868", "1878"],
-        ans: 1,
-        explain: "Từ năm 1858, đế quốc Pháp bắt đầu tiến hành xâm lược Việt Nam (Giáo trình Ch.II, tr.19)."
-      },
-      {
-        q: "Phong trào Đông Du (1905–1909) do ai khởi xướng?",
-        opts: ["Phan Châu Trinh", "Hoàng Hoa Thám", "Phan Bội Châu", "Lương Văn Can"],
-        ans: 2,
-        explain: "Phong trào Đông Du do Phan Bội Châu khởi xướng (1905–1909) (Giáo trình Ch.II, tr.20)."
-      },
-      {
-        q: "Phong trào Đông Kinh Nghĩa Thục hoạt động trong khoảng thời gian nào?",
-        opts: ["1905 – 1907", "1906 – 1908", "3/1907 – 11/1907", "1908 – 1909"],
-        ans: 2,
-        explain: "Đông Kinh Nghĩa Thục do Lương Văn Can, Nguyễn Quyền khởi xướng, hoạt động từ 3-1907 đến 11-1907 (Giáo trình Ch.II, tr.20)."
-      },
-      {
-        q: "Quốc tế Cộng sản được thành lập vào ngày nào, ở đâu?",
-        opts: ["5-6-1911 tại Paris", "2-3-1919 tại Mátxcơva", "25-12-1927 tại Hà Nội", "9-2-1930 tại Yên Bái"],
-        ans: 1,
-        explain: "Ngày 2-3-1919, Quốc tế Cộng sản ra đời ở Mátxcơva, trở thành Bộ tham mưu lãnh đạo phong trào cách mạng thế giới (Giáo trình Ch.II, tr.22)."
-      },
-      {
-        q: "Ngày Hồ Chí Minh ra đi tìm đường cứu nước là ngày nào?",
-        opts: ["3-2-1930", "22-12-1944", "5-6-1911", "2-9-1945"],
-        ans: 2,
-        explain: "Ngày 5-6-1911, Hồ Chí Minh đi ra nước ngoài tìm con đường cứu nước, cứu dân (Giáo trình Ch.II, Mục II.1, tr.28)."
-      }
-    ];
 
-    let qIdx = 0, score = 0, answered = false;
-
-    function initQuiz() {
-      qIdx = 0; score = 0; answered = false;
-      document.getElementById('quiz-main').style.display = 'block';
-      document.getElementById('quiz-result').classList.remove('show');
-      document.getElementById('q-feedback').classList.remove('show', 'ok', 'no');
-      document.getElementById('q-next').disabled = true;
-      document.getElementById('q-score-mini').textContent = '';
-      renderQuestion();
-    }
-
-    function renderQuestion() {
-      const q = questions[qIdx];
-      document.getElementById('q-num').textContent = `Câu ${qIdx + 1} / ${questions.length}`;
-      document.getElementById('q-text').textContent = q.q;
-      document.getElementById('qpfill').style.width = `${(qIdx / questions.length) * 100}%`;
-      const keys = ['A', 'B', 'C', 'D'];
-      document.getElementById('q-opts').innerHTML = q.opts.map((o, i) =>
-        `<button class="quiz-opt" onclick="selectOpt(this,${i})" data-idx="${i}">
-       <span class="opt-key">${keys[i]}</span>${o}
-     </button>`
-      ).join('');
-      answered = false;
-      document.getElementById('q-next').disabled = true;
-      document.getElementById('q-next').textContent = qIdx === questions.length - 1 ? 'Xem kết quả →' : 'Câu tiếp theo →';
-      const fb = document.getElementById('q-feedback');
-      fb.classList.remove('show', 'ok', 'no');
-    }
-
-    function selectOpt(el, idx) {
-      if (answered) return;
-      answered = true;
-      const q = questions[qIdx];
-      const opts = document.querySelectorAll('.quiz-opt');
-      opts.forEach(o => o.disabled = true);
-      const fb = document.getElementById('q-feedback');
-      if (idx === q.ans) {
-        el.classList.add('correct');
-        score++;
-        fb.className = 'quiz-feedback show ok';
-        fb.textContent = '✓ Chính xác! ' + q.explain;
-      } else {
-        el.classList.add('wrong');
-        opts[q.ans].classList.add('correct');
-        fb.className = 'quiz-feedback show no';
-        fb.textContent = '✗ Chưa đúng. ' + q.explain;
-      }
-      document.getElementById('q-next').disabled = false;
-      document.getElementById('q-score-mini').textContent = `${score}/${qIdx + 1}`;
-    }
-
-    function nextQuestion() {
-      if (!answered) return;
-      qIdx++;
-      if (qIdx >= questions.length) {
-        showResult();
-      } else {
-        renderQuestion();
-      }
-    }
-
-    function showResult() {
-      document.getElementById('quiz-main').style.display = 'none';
-      document.getElementById('qpfill').style.width = '100%';
-      const res = document.getElementById('quiz-result');
-      res.classList.add('show');
-      document.getElementById('qr-score-txt').textContent = `${score}/${questions.length}`;
-      const msgs = [
-        'Hãy ôn lại nội dung giáo trình và thử lại nhé!',
-        'Bạn đã nắm được một số điểm. Đọc lại phần cơ sở thực tiễn trong Chương II.',
-        'Khá tốt! Một vài chi tiết cần xác nhận lại trong giáo trình.',
-        'Rất tốt! Bạn nắm vững hầu hết các mốc lịch sử quan trọng.',
-        'Xuất sắc! Bạn hiểu sâu toàn bộ bối cảnh lịch sử trong Chương II.'
-      ];
-      document.getElementById('qr-msg').textContent = msgs[score] || msgs[4];
-    }
-
-    function switchItab(id, btn) {
-      document.querySelectorAll('.itab-panel').forEach(p => p.classList.remove('active'));
-      document.querySelectorAll('.itab-btn').forEach(b => b.classList.remove('active'));
-      document.getElementById('itab-' + id).classList.add('active');
-      btn.classList.add('active');
-    }
 
     function copyOQ() {
       const txt = document.getElementById('oq-area').value.trim();
@@ -2627,7 +2458,6 @@
     })();
 
     // ── INIT ──
-    initQuiz();
     syncCardHeights(); // Chạy ngay lần đầu
   </script>
 </body>
