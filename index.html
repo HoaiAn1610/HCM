@@ -1395,6 +1395,17 @@
       align-items: center;
       width: 100%;
     }
+    /* Slide nhiều chữ: thu gọn khoảng cách để vừa một màn chiếu */
+    html[data-mode="present"] .slide.tight h2 { margin-bottom: .8rem; }
+    html[data-mode="present"] .slide.tight .soc-viz-container { margin: 1rem 0 0; padding: 1.1rem 1.4rem; }
+    html[data-mode="present"] .slide.tight .contradiction-list { gap: .5rem; }
+    html[data-mode="present"] .slide.tight .contradiction-list li { padding: .6rem 1.2rem; }
+    html[data-mode="present"] .slide.tight .convergence-infographic { margin: 1rem 0 0; padding: 1.3rem; }
+    html[data-mode="present"] .slide.tight .ci-streams-grid { gap: .8rem; margin-bottom: 1rem; }
+    html[data-mode="present"] .slide.tight .ci-card { padding: .85rem 1.1rem; }
+    html[data-mode="present"] .slide.tight .ci-nexus { padding: .8rem 1.2rem; margin-bottom: 1rem; }
+    html[data-mode="present"] .slide.tight .ci-resolution { padding: 1.1rem; }
+
     html[data-mode="present"] .split-slide-grid.equal {
       grid-template-columns: 1fr 1fr;
       gap: 2.8rem;
@@ -1662,7 +1673,7 @@
             <div class="seal-inner">
               <span class="seal-sub">HỌC PHẦN HCM202</span>
               <span class="seal-main">LỊCH SỬ</span>
-              <span class="seal-date">1858 – 1911</span>
+              <span class="seal-date">1858 – 1930</span>
             </div>
           </div>
         </div>
@@ -1684,7 +1695,7 @@
               <span class="hero-title-accent">VIỆT NAM &amp; THẾ GIỚI</span>
             </h1>
             <div class="hero-subtitle-epoch">
-              ❖ GIAI ĐOẠN ĐẦU THẾ KỶ XX (1858 – 1911) ❖
+              ❖ CUỐI THẾ KỶ XIX – ĐẦU THẾ KỶ XX ❖
             </div>
           </div>
 
@@ -1718,7 +1729,7 @@
        TIMELINE / SLIDE 02: DÒNG THỜI GIAN
   ══════════════════════════════════════════ -->
   <section id="timeline-sec" class="section" style="max-width: 1100px;">
-    <div class="slide" data-label="Biên niên sử 1858–1930" data-notes="Timeline cho thấy 2 giai đoạn: Từ 1858-1911 là bế tắc của các phong trào cũ, đỉnh điểm 5-6-1911 Bác Hồ ra đi tìm đường cứu nước, sau đó 1917-1919 mở ra thời đại cách mạng vô sản.">
+    <div class="slide" data-label="Biên niên sử 1858–1930" data-notes="Timeline cho thấy 2 giai đoạn: Từ 1858-1911 là bế tắc của các phong trào cũ, đỉnh điểm 5-6-1911 Bác Hồ ra đi tìm đường cứu nước, sau đó 1917-1919 mở ra thời đại cách mạng vô sản. Lưu ý: VN Quốc dân đảng (1927) và khởi nghĩa Yên Bái (1930) diễn ra SAU khi Bác đã ra đi — đây là minh chứng rằng khuynh hướng dân chủ tư sản vẫn tiếp tục thất bại, khẳng định sự đúng đắn của lựa chọn con đường mới.">
       <div class="eyebrow">Dòng thời gian tổng thể</div>
       <h2>Biên niên sử các mốc then chốt (1858 – 1930)</h2>
       <p style="color: var(--tx-s); margin-bottom: 1.5rem;">
@@ -1752,6 +1763,11 @@
             <div class="tl-year">1907</div>
             <div class="tl-desc">Đông Kinh Nghĩa Thục</div>
           </div>
+          <div class="tl-item" data-section="tang2">
+            <div class="tl-dot"></div>
+            <div class="tl-year">1908</div>
+            <div class="tl-desc">Chống sưu thuế ở Trung Kỳ</div>
+          </div>
           <div class="tl-item tl-key" data-section="ketluan">
             <div class="tl-dot"></div>
             <div class="tl-year">5·6·1911</div>
@@ -1769,7 +1785,12 @@
           </div>
           <div class="tl-item" data-section="tang2">
             <div class="tl-dot"></div>
-            <div class="tl-year">1930</div>
+            <div class="tl-year">25·12·1927</div>
+            <div class="tl-desc">VN Quốc dân đảng thành lập</div>
+          </div>
+          <div class="tl-item" data-section="tang2">
+            <div class="tl-dot"></div>
+            <div class="tl-year">9·2·1930</div>
             <div class="tl-desc">Khởi nghĩa Yên Bái thất bại</div>
           </div>
         </div>
@@ -1784,7 +1805,7 @@
   ══════════════════════════════════════════ -->
   <section class="section" id="tang1">
     <!-- Slide 03: Pháp xâm lược -->
-    <div class="slide" data-label="01 · Bối cảnh áp bức 1858" data-notes="Phân tích: Pháp hoàn tất bình định quân sự và bước vào cuộc khai thác thuộc địa lần 1, biến VN từ phong kiến độc lập thành thuộc địa nửa phong kiến.">
+    <div class="slide" data-label="01 · Bối cảnh áp bức 1858" data-notes="Phân tích: Pháp hoàn tất bình định quân sự và bước vào cuộc khai thác thuộc địa lần 1, biến VN từ nước phong kiến thành nước thuộc địa và phong kiến (theo đúng cách diễn đạt của giáo trình).">
       <div class="eyebrow">Tầng nguyên nhân thứ nhất</div>
       <span class="section-number">01</span>
       
@@ -1792,14 +1813,14 @@
         <div>
           <h2>Bối cảnh áp bức &amp; Sự biến đổi cấu trúc</h2>
           <p>
-            Từ năm <strong>1858</strong>, thực dân Pháp nổ súng xâm lược Việt Nam. Triều đình nhà Nguyễn bạc nhược lần lượt ký kết các hiệp ước đầu hàng, từng bước biến Việt Nam thành một nước <strong>thuộc địa nửa phong kiến</strong>.
+            Từ năm <strong>1858</strong>, thực dân Pháp nổ súng xâm lược Việt Nam. Triều đình nhà Nguyễn bạc nhược lần lượt ký kết các hiệp ước đầu hàng, từng bước trở thành <strong>tay sai của thực dân Pháp</strong>.
           </p>
           <p>
-            Sau khi căn bản hoàn thành bình định quân sự, Pháp tiến hành khai thác thuộc địa quy mô lớn, làm đảo lộn cấu trúc kinh tế - xã hội truyền thống của dân tộc ta.
+            Sau khi căn bản hoàn thành bình định quân sự, Pháp tiến hành khai thác thuộc địa một cách mạnh mẽ, làm đảo lộn cấu trúc kinh tế - xã hội truyền thống của dân tộc ta.
           </p>
           <div class="callout">
-            "Xã hội Việt Nam từ một xã hội phong kiến thuần túy đã biến đổi sâu sắc thành xã hội thuộc địa nửa phong kiến."
-            <cite>Giáo trình Tư tưởng Hồ Chí Minh, Chương II, Mục I.1.a, tr.19</cite>
+            "…từng bước biến nước ta từ một nước phong kiến thành nước <strong>thuộc địa và phong kiến</strong> dẫn tới có sự biến đổi về cơ cấu giai cấp, tầng lớp trong xã hội."
+            <cite>Giáo trình Tư tưởng Hồ Chí Minh, Chương II, Mục I.1.a</cite>
           </div>
         </div>
         <div>
@@ -1826,7 +1847,7 @@
         </div>
         <div class="soc-viz-bar">
           <div class="sv-seg-farmer">95% DÂN SỐ LÀ NÔNG DÂN</div>
-          <div class="sv-seg-new" title="Công nhân, Tư sản, Tiểu tư sản">5% MỚI</div>
+          <div class="sv-seg-new" title="Địa chủ, thợ thủ công, tiểu thương, công nhân, tư sản, tiểu tư sản">5%</div>
         </div>
         <div class="soc-legend-grid">
           <div class="soc-card highlight">
@@ -1845,6 +1866,9 @@
             <p>Tư sản dân tộc non yếu, bị chèn ép; tiểu tư sản trí thức thành thị nhạy bén với tư tưởng dân chủ mới nhưng dao động.</p>
           </div>
         </div>
+        <p style="font-size: .88rem; color: var(--tx-s); margin: 1.1rem 0 0;">
+          <strong>Giai tầng cũ:</strong> Pháp duy trì nền kinh tế nông nghiệp lạc hậu; giai cấp <strong>địa chủ</strong> được bổ sung, củng cố thêm các <strong>điền chủ người Pháp và nước ngoài</strong>; bên cạnh đó vẫn còn tầng lớp <strong>thợ thủ công, tiểu thương</strong>.
+        </p>
       </div>
     </div>
 
@@ -1884,66 +1908,107 @@
        TẦNG 2: CÁC CON ĐƯỜNG CŨ LIÊN TIẾP THẤT BẠI
   ══════════════════════════════════════════ -->
   <section class="section" id="tang2">
-    <!-- Slide 06: Bế tắc con đường cũ -->
-    <div class="slide" data-label="02 · Con đường cũ thất bại" data-notes="Trình bày 2 khuynh hướng cứu nước truyền thống: Phong kiến và Dân chủ tư sản. Tất cả đều nổ ra oanh liệt nhưng đều thất bại.">
+    <!-- Slide 06a: Khuynh hướng phong kiến -->
+    <div class="slide" data-label="02 · Khuynh hướng phong kiến" data-notes="① Ba miền đều khởi nghĩa, nhiều cuộc theo ngọn cờ Cần Vương. ② Anh dũng nhưng đều thất bại. ③ Chốt: nhân dân rất yêu nước, nhưng giai cấp phong kiến và hệ tư tưởng của nó đã suy tàn, bất lực. → Chuyển: đầu TK XX tìm hướng đi khác.">
       <div class="eyebrow">Tầng nguyên nhân thứ hai</div>
       <span class="section-number">02</span>
-      <h2>Các con đường cứu nước cũ liên tiếp thất bại</h2>
+      <h2>Khuynh hướng Phong kiến (cuối thế kỷ XIX)</h2>
       <p>
-        Trước cảnh nước mất nhà tan, nhân dân ta không ngừng vùng dậy đấu tranh theo hai khuynh hướng chính: <strong>Ý thức hệ Phong kiến</strong> và <strong>Dân chủ Tư sản</strong>. Song tất cả đều rơi vào bế tắc bi tráng.
+        Từ năm 1858 đến cuối thế kỷ XIX, các phong trào đấu tranh yêu nước chống Pháp xâm lược liên tục nổ ra trên khắp ba miền:
       </p>
 
-      <div class="matrix-card">
-        <div class="matrix-header-grid">
-          <div class="mh-col">
-            <span>❖</span> Khuynh hướng Phong kiến
-          </div>
-          <div class="mh-col">
-            <span>❖</span> Khuynh hướng Dân chủ Tư sản
-          </div>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem; margin: 1.3rem 0;">
+        <div class="movement-item">
+          <div class="mi-top"><span class="mi-name">Miền Nam</span><span class="mi-time">NAM KỲ</span></div>
+          <div class="mi-leader">Khởi nghĩa Trương Định, Nguyễn Trung Trực</div>
+          <div class="mi-fail">✗ Thất bại</div>
         </div>
-        <div class="matrix-body-grid">
-          <div class="mb-col">
-            <div class="movement-item">
-              <div class="mi-top"><span class="mi-name">Khởi nghĩa Trương Định &amp; Nguyễn Trung Trực</span><span class="mi-time">1858–1868</span></div>
-              <div class="mi-leader">Nam Kỳ kháng chiến anh dũng</div>
-              <div class="mi-fail">✗ Thất bại do vũ khí thô sơ, cô lập</div>
-            </div>
-            <div class="movement-item">
-              <div class="mi-top"><span class="mi-name">Phong trào Cần Vương (Phan Đình Phùng)</span><span class="mi-time">1885–1896</span></div>
-              <div class="mi-leader">Ngọn cờ 'Giúp vua cứu nước'</div>
-              <div class="mi-fail">✗ Hệ tư tưởng phong kiến đã lỗi thời</div>
-            </div>
-            <div class="movement-item">
-              <div class="mi-top"><span class="mi-name">Khởi nghĩa Yên Thế (Hoàng Hoa Thám)</span><span class="mi-time">1884–1913</span></div>
-              <div class="mi-leader">Phong trào nông dân kiên cường</div>
-              <div class="mi-fail">✗ Mang tính tự phát, thiếu đường lối</div>
-            </div>
-          </div>
+        <div class="movement-item">
+          <div class="mi-top"><span class="mi-name">Miền Trung</span><span class="mi-time">TRUNG KỲ</span></div>
+          <div class="mi-leader">Khởi nghĩa Trần Tấn, Đặng Như Mai; Phan Đình Phùng (Cần Vương)</div>
+          <div class="mi-fail">✗ Thất bại</div>
+        </div>
+        <div class="movement-item">
+          <div class="mi-top"><span class="mi-name">Miền Bắc</span><span class="mi-time">BẮC KỲ</span></div>
+          <div class="mi-leader">Nguyễn Thiện Thuật, Phạm Bành &amp; Đinh Công Tráng, Nguyễn Quang Bích, Hoàng Hoa Thám…</div>
+          <div class="mi-fail">✗ Thất bại</div>
+        </div>
+      </div>
 
-          <div class="mb-col">
-            <div class="movement-item">
-              <div class="mi-top"><span class="mi-name">Phong trào Đông Du (Phan Bội Châu)</span><span class="mi-time">1905–1909</span></div>
-              <div class="mi-leader">Chủ trương dựa vào Nhật Bản</div>
-              <div class="mi-fail">✗ "Đuổi hổ cửa trước, rước beo cửa sau"</div>
-            </div>
-            <div class="movement-item">
-              <div class="mi-top"><span class="mi-name">Phong trào Duy Tân (Phan Châu Trinh)</span><span class="mi-time">1906–1908</span></div>
-              <div class="mi-leader">Khai dân trí, dựa vào Pháp cải cách</div>
-              <div class="mi-fail">✗ "Xin giặc rủ lòng thương" là ảo tưởng</div>
-            </div>
-            <div class="movement-item">
-              <div class="mi-top"><span class="mi-name">Khởi nghĩa Yên Bái (VN Quốc Dân Đảng)</span><span class="mi-time">1930</span></div>
-              <div class="mi-leader">Nguyễn Thái Học · Tư sản dân tộc</div>
-              <div class="mi-fail">✗ "Không thành công cũng thành nhân"</div>
-            </div>
+      <div class="callout callout-red" style="margin: 1rem 0 0;">
+        "Các cuộc khởi nghĩa, trong đó có những cuộc dưới ngọn cờ 'Cần Vương' tức giúp vua cứu nước, tuy đều rất anh dũng, nhưng cuối cùng đều thất bại. Điều đó chứng tỏ nhân dân ta rất yêu nước, song <strong>giai cấp phong kiến và hệ tư tưởng của nó đã suy tàn, bất lực</strong> trước nhiệm vụ bảo vệ độc lập dân tộc."
+        <cite>Giáo trình Tư tưởng Hồ Chí Minh, Chương II, Mục I.1.a</cite>
+      </div>
+    </div>
+
+    <!-- Slide 06b: Khuynh hướng dân chủ tư sản -->
+    <div class="slide" data-label="02 · Khuynh hướng dân chủ tư sản" data-notes="Bối cảnh: CM dân chủ tư sản Trung Quốc + Duy Tân Nhật Bản → sĩ phu muốn canh tân, khai dân trí. ① Đông Du (PBC, 1905–1909): đưa thanh niên sang Nhật; Pháp–Nhật cấu kết → tan rã; hạn chế: dựa vào Nhật. ② Duy Tân (PCT, 1906–1908): khai dân trí, dân quyền; hạn chế: trông chờ Pháp cải cách. ③ ĐKNT (3–11/1907): mở trường, bị đóng cửa. ④ Chống sưu thuế Trung Kỳ 1908: bị đàn áp. → Chuyển: tất cả thất bại; cuối thập niên 1920 thể hiện qua VNQDĐ.">
+      <div class="eyebrow">Tầng nguyên nhân thứ hai</div>
+      <h2>Khuynh hướng Dân chủ Tư sản (đầu thế kỷ XX)</h2>
+      <p>
+        Trước ảnh hưởng của các cuộc vận động cải cách, của <strong>cách mạng dân chủ tư sản ở Trung Quốc</strong> và tấm gương <strong>Duy Tân Nhật Bản</strong>, xuất hiện các phong trào yêu nước do các sĩ phu có tinh thần cải cách dẫn dắt:
+      </p>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 420px), 1fr)); gap: 1rem; margin: 1.3rem 0 0;">
+        <div class="movement-item">
+          <div class="mi-top"><span class="mi-name">Phong trào Đông Du</span><span class="mi-time">1905–1909</span></div>
+          <div class="mi-leader">Phan Bội Châu khởi xướng · dựa vào Nhật Bản</div>
+          <div class="mi-fail">✗ Thất bại — "Đuổi hổ cửa trước, rước beo cửa sau" (Nguyễn Ái Quốc)</div>
+        </div>
+        <div class="movement-item">
+          <div class="mi-top"><span class="mi-name">Phong trào Duy Tân</span><span class="mi-time">1906–1908</span></div>
+          <div class="mi-leader">Phan Châu Trinh phát động · khai dân trí, dựa vào Pháp cải cách</div>
+          <div class="mi-fail">✗ Thất bại — "Xin giặc rủ lòng thương" (Nguyễn Ái Quốc)</div>
+        </div>
+        <div class="movement-item">
+          <div class="mi-top"><span class="mi-name">Đông Kinh Nghĩa Thục</span><span class="mi-time">3/1907 – 11/1907</span></div>
+          <div class="mi-leader">Lương Văn Can, Nguyễn Quyền và một số nhân sĩ khác phát động</div>
+          <div class="mi-fail">✗ Thất bại</div>
+        </div>
+        <div class="movement-item">
+          <div class="mi-top"><span class="mi-name">Chống đi phu, chống sưu thuế</span><span class="mi-time">1908</span></div>
+          <div class="mi-leader">Phong trào quần chúng ở Trung Kỳ</div>
+          <div class="mi-fail">✗ Thất bại</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Slide 06c: VN Quốc dân đảng & Khởi nghĩa Yên Bái -->
+    <div class="slide" data-label="02 · VN Quốc dân đảng & Yên Bái" data-notes="Nhắc: sự kiện SAU 1911. ① 25-12-1927, 3 người sáng lập, đại diện TƯ SẢN DÂN TỘC. ② Phương châm: Không thành công cũng thành nhân. ③ Đêm 9-2-1930: Yên Bái, Phú Thọ → Hải Dương, Thái Bình; Hà Nội ném bom. ④ Thất bại, 13 người bị xử tử, hô Việt Nam vạn tuế. ⑤ Chỉ khung đỏ: sâu xa = tư sản non yếu (VNQDĐ chính là đại diện); trực tiếp = chưa có đường lối, phương pháp đúng.">
+      <div class="eyebrow">Tầng nguyên nhân thứ hai</div>
+      <h2>Việt Nam Quốc dân đảng &amp; Khởi nghĩa Yên Bái</h2>
+      <div style="margin: -.4rem 0 1rem;"><span class="seal-badge">DIỄN RA SAU KHI BÁC RA ĐI (1911)</span></div>
+
+      <div class="split-slide-grid equal">
+        <div>
+          <ul class="contradiction-list" style="margin: 0; gap: .6rem;">
+            <li style="padding: .7rem 1.1rem; font-size: .92rem;">
+              <span class="tag-gold" style="min-width: 7.5rem; text-align: center;">25·12·1927</span>
+              <div>Thành lập do <strong>Nguyễn Thái Học, Phạm Tuấn Tài, Phó Đức Chính</strong>; theo xu hướng dân chủ tư sản, đại diện tư sản dân tộc; địa bàn chính ở Bắc Kỳ.</div>
+            </li>
+            <li style="padding: .7rem 1.1rem; font-size: .92rem;">
+              <span class="tag-gold" style="min-width: 7.5rem; text-align: center;">9·2·1930</span>
+              <div>Khởi nghĩa nổ ra ở <strong>Yên Bái, Phú Thọ</strong>, sau đó Hải Dương, Thái Bình; ở Hà Nội ném bom Sở Mật thám, Sở Cảnh sát. Phương châm: <em>"Không thành công cũng thành nhân"</em>.</div>
+            </li>
+            <li class="key-conflict" style="padding: .7rem 1.1rem; font-size: .92rem;">
+              <span class="conflict-symbol">✗</span>
+              <div>Chiếm được trại lính nhưng không làm chủ được tỉnh lỵ, hôm sau bị Pháp phản công tiêu diệt. Nguyễn Thái Học cùng 12 đồng chí bị xử tử, hô to <em>"Việt Nam vạn tuế!"</em></div>
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="callout callout-red" style="margin: 0;">
+            <strong style="font-style: normal;">Nguyên nhân thất bại của các phong trào dân chủ tư sản:</strong><br>
+            "Nguyên nhân sâu xa là <strong>giai cấp tư sản Việt Nam còn non yếu</strong>. Nguyên nhân trực tiếp là các tổ chức và người lãnh đạo của các phong trào đó <strong>chưa có đường lối và phương pháp cách mạng đúng đắn</strong>."
+            <cite>Giáo trình Tư tưởng Hồ Chí Minh, Chương II, Mục I.1.a</cite>
           </div>
         </div>
       </div>
     </div>
 
     <!-- Slide 07: Chân dung các vị tiền bối -->
-    <div class="slide" data-label="02 · Tư liệu các vị tiền bối" data-notes="Nhấn mạnh lòng yêu nước của các vị tiền bối Phan Bội Châu, Phan Châu Trinh, Hoàng Hoa Thám, nhưng hạn chế về thế giới quan và phương pháp cách mạng.">
+    <div class="slide" data-label="02 · Tư liệu các vị tiền bối" data-notes="~15 giây: Các cụ đều là người yêu nước đáng kính, nhưng con đường các cụ chọn chưa đưa dân tộc đến thắng lợi.">
       <div class="eyebrow">Chứng tích lịch sử</div>
       <h2>Chân dung &amp; Phong trào các vị Tiền bối</h2>
 
@@ -1973,15 +2038,19 @@
     </div>
 
     <!-- Slide 08: Khủng hoảng đường lối sâu sắc -->
-    <div class="slide" data-label="02 · Khủng hoảng đường lối" data-notes="Điểm trũng tâm lý của bài: Sự thất bại hàng loạt đẩy dân tộc vào cuộc khủng hoảng sâu sắc về đường lối cứu nước và giai cấp lãnh đạo.">
+    <div class="slide" data-label="02 · Khủng hoảng đường lối" data-notes="Chỉ dải ✗: Cần Vương → Đông Du → Duy Tân → ĐKNT → Yên Bái. Yêu nước không thiếu — thiếu con đường đúng. Đọc chậm câu hỏi lớn. → Chuyển: câu trả lời bắt đầu từ giai cấp công nhân (phần 03).">
       <div class="crisis-monument">
         <h3>Cuộc Khủng Hoảng Đường Lối Cứu Nước Sâu Sắc</h3>
-        <p style="color: var(--tx-s); font-size: 1.05rem;">
-          Tinh thần yêu nước của nhân dân ta sục sôi như triều dâng bão cuốn, nhưng mọi ngọn cờ đều lần lượt gãy đổ. Đất nước chìm trong đêm tối không lối thoát, đặt ra câu hỏi xé lòng của lịch sử:
+        <div style="font-family: 'Space Mono', monospace; font-size: .78rem; letter-spacing: .06em; color: var(--red-b); font-weight: 700; margin: .2rem 0 1rem;">
+          CẦN VƯƠNG ✗ → ĐÔNG DU ✗ → DUY TÂN ✗ → ĐÔNG KINH NGHĨA THỤC ✗ → YÊN BÁI ✗
+        </div>
+        <p style="color: var(--tx-s); font-size: 1.05rem; margin: 0 auto;">
+          "Tinh thần yêu nước vẫn sục sôi trong lòng nhân dân. Song, cuộc khủng hoảng về đường lối cứu nước diễn ra sâu sắc. Xuất hiện câu hỏi từ thực tiễn đặt ra là:"
         </p>
         <div class="crisis-question">
-          "Cứu nước bằng con đường nào để có thể đi đến thắng lợi thực sự?"
+          "Cứu nước bằng con đường nào để có thể đi đến thắng lợi?"
         </div>
+        <p style="font-family: 'Space Mono', monospace; font-size: .7rem; color: var(--gold-d); letter-spacing: .06em; margin: .3rem auto 0; text-align: center;">Giáo trình Tư tưởng Hồ Chí Minh, Chương II, Mục I.1.a</p>
         <div class="seal-badge" style="margin-top: .5rem;">YÊU CẦU BỨC THIẾT CỦA THỜI ĐẠI</div>
       </div>
     </div>
@@ -2002,10 +2071,10 @@
         <div>
           <h2>Điều kiện nội tại: Lực lượng Cách mạng Mới</h2>
           <p>
-            Trong khi các giai cấp cũ bất lực, <strong>giai cấp công nhân Việt Nam</strong> từng bước lớn mạnh và trở thành một giai cấp độc lập ngay trước thềm Chiến tranh thế giới thứ nhất (1914–1918).
+            Cuối thế kỷ XIX, công nhân mới chỉ là một lực lượng <strong>ít ỏi, không ổn định</strong>. Đầu thế kỷ XX, <strong>giai cấp công nhân Việt Nam</strong> phát triển hơn và trở thành một giai cấp ngay trước Chiến tranh thế giới thứ nhất (1914–1918).
           </p>
           <p>
-            Mặc dù số lượng chưa đông, công nhân Việt Nam gắn bó máu thịt với nông dân, sớm tiếp thu truyền thống yêu nước và nhanh chóng chuyển từ đấu tranh tự phát sang tự giác.
+            Họ sớm vùng dậy đấu tranh chống lại giới chủ: từ hình thức thô sơ như <em>đốt lán trại, bỏ trốn tập thể</em>, nhanh chóng tiến tới <strong>đình công, bãi công</strong> — dấu hiệu mới của một thời đại mới sắp ra đời.
           </p>
           <div class="callout">
             "Chỉ có giai cấp công nhân là dũng cảm nhất, cách mạng nhất, luôn luôn gan góc đương đầu với bọn đế quốc thực dân."
@@ -2025,7 +2094,7 @@
     </div>
 
     <!-- Slide 10: 3 tầng áp bức lên công nhân -->
-    <div class="slide" data-label="03 · Ba tầng áp bức" data-notes="Ba tầng áp bức: Thực dân Pháp (dân tộc) + Tư bản chủ xưởng (kinh tế) + Phong kiến tay sai (xã hội) khiến công nhân không có gì để mất ngoài xiềng xích.">
+    <div class="slide" data-label="03 · Ba tầng áp bức" data-notes="Ba tầng áp bức: Thực dân (chính trị) + Tư bản (kinh tế) + Phong kiến tay sai (xã hội) khiến công nhân không có gì để mất ngoài xiềng xích.">
       <div class="eyebrow">Cơ chế áp bức</div>
       <h2>Ba Tầng Áp Bức Đè Nặng Lên Người Công Nhân</h2>
 
@@ -2034,25 +2103,25 @@
           <div class="pl-item">
             <div class="pl-left">
               <span class="pl-badge">TẦNG 1</span>
-              <span class="pl-title">Thực dân Đế quốc</span>
+              <span class="pl-title">Thực dân</span>
             </div>
-            <span class="pl-impact">Áp bức dân tộc dã man</span>
+            <span class="pl-impact">Áp bức về chính trị</span>
           </div>
           <div style="text-align: center; color: var(--red-b); font-size: 1.2rem;">↓</div>
           <div class="pl-item">
             <div class="pl-left">
               <span class="pl-badge">TẦNG 2</span>
-              <span class="pl-title">Tư bản Thực dân &amp; Bản địa</span>
+              <span class="pl-title">Tư bản</span>
             </div>
-            <span class="pl-impact">Bóc lột giá trị thặng dư</span>
+            <span class="pl-impact">Bóc lột về kinh tế</span>
           </div>
           <div style="text-align: center; color: var(--red-b); font-size: 1.2rem;">↓</div>
           <div class="pl-item">
             <div class="pl-left">
               <span class="pl-badge">TẦNG 3</span>
-              <span class="pl-title">Phong kiến Tay sai</span>
+              <span class="pl-title">Phong kiến</span>
             </div>
-            <span class="pl-impact">Kìm kẹp địa chủ phong kiến</span>
+            <span class="pl-impact">Áp bức về xã hội</span>
           </div>
         </div>
 
@@ -2060,6 +2129,36 @@
           <div class="callout callout-red" style="font-size: 1.05rem;">
             Do phải chịu gánh nặng áp bức tam trùng cực kỳ tàn bạo, giai cấp công nhân Việt Nam mang tính kiên định cách mạng triệt để nhất — là <strong>mảnh đất màu mỡ sẵn sàng đón nhận hạt giống Chủ nghĩa Mác – Lênin</strong>.
           </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Slide 10b: Từ phong trào công nhân đến chủ nghĩa Mác - Lênin -->
+    <div class="slide tight" data-label="03 · Tiền đề truyền bá Mác - Lênin" data-notes="Đoạn chốt của mục I.1.a: phong trào công nhân + phong trào yêu nước là điều kiện thuận lợi để chủ nghĩa Mác - Lênin xâm nhập. Hồ Chí Minh truyền bá, chuẩn bị lý luận - tư tưởng - tổ chức, sáng lập Đảng Cộng sản Việt Nam (1930), chấm dứt khủng hoảng đường lối, đánh dấu bước hình thành cơ bản tư tưởng HCM về cách mạng Việt Nam.">
+      <div class="eyebrow">Tầng nguyên nhân thứ ba</div>
+      <h2>Tiền đề để chủ nghĩa Mác – Lênin vào Việt Nam</h2>
+
+      <div class="convergence-infographic">
+        <div class="ci-streams-grid">
+          <div class="ci-card">
+            <div class="ci-card-type">ĐIỀU KIỆN 1</div>
+            <div class="ci-card-title">Phong trào công nhân Việt Nam</div>
+          </div>
+          <div class="ci-card">
+            <div class="ci-card-type">ĐIỀU KIỆN 2</div>
+            <div class="ci-card-title">Các phong trào yêu nước đầu thế kỷ XX</div>
+          </div>
+        </div>
+
+        <div class="ci-nexus">
+          <h4>❖ ĐIỀU KIỆN THUẬN LỢI ĐỂ CHỦ NGHĨA MÁC – LÊNIN XÂM NHẬP, TRUYỀN BÁ ❖</h4>
+        </div>
+
+        <div class="ci-resolution">
+          <h3>VAI TRÒ CỦA HỒ CHÍ MINH</h3>
+          <p style="color: var(--tx); font-size: 1rem; max-width: 64ch; margin: 0 auto;">
+            Dày công truyền bá chủ nghĩa Mác – Lênin, chuẩn bị về <strong>lý luận chính trị, tư tưởng và tổ chức</strong>, sáng lập <strong>Đảng Cộng sản Việt Nam</strong> — chấm dứt sự khủng hoảng về đường lối cách mạng Việt Nam, đánh dấu bước hình thành cơ bản tư tưởng Hồ Chí Minh về cách mạng Việt Nam.
+          </p>
         </div>
       </div>
     </div>
@@ -2072,13 +2171,13 @@
   ══════════════════════════════════════════ -->
   <section class="section" id="tang4">
     <!-- Slide 11: Chủ nghĩa đế quốc & 3 mâu thuẫn thời đại -->
-    <div class="slide" data-label="04 · Thời đại Đế quốc chủ nghĩa" data-notes="Chủ nghĩa tư bản chuyển sang đế quốc chủ nghĩa, xâm chiếm thuộc địa. 3 mâu thuẫn thời đại xuất hiện. Cách mạng thuộc địa trở thành một bộ phận của cách mạng vô sản thế giới.">
+    <div class="slide tight" data-label="04 · Thời đại Đế quốc chủ nghĩa" data-notes="Chủ nghĩa tư bản chuyển sang đế quốc chủ nghĩa, xâm chiếm thuộc địa. 3 mâu thuẫn thời đại xuất hiện. Cách mạng thuộc địa trở thành một bộ phận của cách mạng vô sản thế giới.">
       <div class="eyebrow">Tầng nguyên nhân thứ tư</div>
       <span class="section-number">04</span>
 
       <h2>Thế giới chuyển mình: Thời đại Đế quốc chủ nghĩa</h2>
       <p>
-        Cuối thế kỷ XIX - đầu thế kỷ XX, chủ nghĩa tư bản chuyển sang giai đoạn <strong>chủ nghĩa đế quốc</strong>. Các cường quốc hoàn thành việc phân chia thuộc địa, đẩy phần lớn các dân tộc Á - Phi - Mỹ Latinh vào vòng nô dịch.
+        Cuối thế kỷ XIX - đầu thế kỷ XX, chủ nghĩa tư bản chuyển từ giai đoạn tự do cạnh tranh sang giai đoạn <strong>đế quốc chủ nghĩa</strong>. Một số nước đế quốc <strong>Anh, Pháp, Mỹ, Tây Ban Nha, Ý, Đức, Nga, Nhật Bản, Bỉ, Bồ Đào Nha, Hà Lan…</strong> chi phối toàn bộ tình hình thế giới; phần lớn các nước châu Á, châu Phi và Mỹ Latinh trở thành thuộc địa và phụ thuộc.
       </p>
 
       <div class="soc-viz-container">
@@ -2090,13 +2189,16 @@
           </li>
           <li>
             <span class="conflict-symbol">❖</span>
-            <div><strong>Các nước Đế quốc</strong> ⟷ <strong>Nhau</strong> (Tranh giành thị trường &amp; thuộc địa &rarr; Chiến tranh thế giới).</div>
+            <div><strong>Các nước Đế quốc</strong> ⟷ <strong>Nhau</strong> (Tranh giành thị trường &amp; thuộc địa → Chiến tranh thế giới).</div>
           </li>
           <li class="key-conflict">
             <span class="conflict-symbol">❖</span>
             <div><strong>Các Dân tộc Thuộc địa</strong> ⟷ <strong>Chủ nghĩa Thực dân Đế quốc</strong>.</div>
           </li>
         </ul>
+        <p style="font-size: .9rem; color: var(--tx-s); margin: 1rem 0 0;">
+          → Giành độc lập cho các dân tộc thuộc địa không chỉ là đòi hỏi của riêng họ, mà còn là <strong>mong muốn chung của giai cấp vô sản quốc tế</strong>, thúc đẩy phong trào giải phóng dân tộc trên thế giới phát triển.
+        </p>
       </div>
     </div>
 
@@ -2108,29 +2210,32 @@
       <div class="split-slide-grid equal">
         <div>
           <div class="museum-plate">
-            <img src="assets/09-cach-mang-thang-muoi-nga.jpg" alt="Cách mạng Tháng Mười Nga 1917">
+            <img src="assets/09-cach-mang-thang-muoi-nga.jpg" alt="Cách mạng Tháng Mười Nga 1917" style="max-height: 28vh; object-fit: cover;">
             <div class="plate-caption">
               <span class="plate-id">NĂM 1917</span>
               <span class="plate-title">Cách mạng Tháng Mười Nga toàn thắng</span>
             </div>
           </div>
           <p style="font-size: .9rem; color: var(--tx-s); margin-top: .9rem;">
-            Lần đầu tiên chủ nghĩa Mác - Lênin trở thành hiện thực, giải phóng nhân dân lao động trên 1/6 địa cầu, mở ra thời đại mới cho phong trào giải phóng dân tộc.
+            Thắng lợi đầu tiên của chủ nghĩa Mác - Lênin ở một nước rộng 1/6 thế giới; đánh đổ tư sản và địa chủ phong kiến, lập nên xã hội xã hội chủ nghĩa — <em>"mở ra một thời đại mới… quá độ từ chủ nghĩa tư bản lên chủ nghĩa xã hội trên phạm vi toàn thế giới, mở ra con đường giải phóng cho các dân tộc bị áp bức."</em>
           </p>
         </div>
 
         <div>
           <div class="museum-plate">
-            <img src="assets/10-quoc-te-cong-san.jpg" alt="Quốc tế Cộng sản 1919">
+            <img src="assets/10-quoc-te-cong-san.jpg" alt="Quốc tế Cộng sản 1919" style="max-height: 28vh; object-fit: cover;">
             <div class="plate-caption">
               <span class="plate-id">2·3·1919</span>
               <span class="plate-title">Quốc tế Cộng sản (Comintern) thành lập</span>
             </div>
           </div>
           <p style="font-size: .9rem; color: var(--tx-s); margin-top: .9rem;">
-            Trở thành Bộ tham mưu lãnh đạo phong trào cách mạng thế giới, trực tiếp đưa chủ nghĩa Mác - Lênin gắn kết với phong trào giải phóng thuộc địa.
+            Ra đời ở Mátxcơva, trở thành Bộ tham mưu lãnh đạo phong trào cách mạng thế giới. Dưới sự lãnh đạo của Lênin, đẩy mạnh truyền bá chủ nghĩa Mác - Lênin và kinh nghiệm Cách mạng Tháng Mười, thúc đẩy sự ra đời của các đảng cộng sản ở nhiều nước.
           </p>
         </div>
+      </div>
+      <div class="callout" style="margin: 1.1rem 0 0; padding: .9rem 1.4rem; font-size: .95rem;">
+        Tất cả những sự kiện đó <strong>ảnh hưởng sâu sắc tới Hồ Chí Minh</strong> trên hành trình đi ra thế giới tìm mục tiêu và con đường cứu nước.
       </div>
     </div>
   </section>
@@ -2142,7 +2247,7 @@
   ══════════════════════════════════════════ -->
   <section class="section" id="hoitu">
     <!-- Slide 13: Infographic 4 Luồng hội tụ -->
-    <div class="slide" data-label="05 · Sơ đồ hội tụ nhân quả" data-notes="Tổng hợp 4 dòng chảy lịch sử: Nền tảng + Trực tiếp + Nội tại + Thời đại. Không có yếu tố nào đơn lẻ là đủ, mà sự hội tụ biện chứng của cả 4 yếu tố tạo nên tính tất yếu lịch sử.">
+    <div class="slide tight" data-label="05 · Sơ đồ hội tụ nhân quả" data-notes="Tổng hợp 4 dòng chảy lịch sử: Nền tảng + Trực tiếp + Nội tại + Thời đại. Không có yếu tố nào đơn lẻ là đủ, mà sự hội tụ biện chứng của cả 4 yếu tố tạo nên tính tất yếu lịch sử.">
       <div class="eyebrow">Phân tích tổng hợp biện chứng</div>
       <span class="section-number">05</span>
       <h2>Hội Tụ Nhân Quả: Con Đường Mới Là Tất Yếu</h2>
@@ -2203,18 +2308,18 @@
   <section class="section" id="ketluan">
     <!-- Slide 15: Phê phán có chọn lọc -->
     <div class="slide" data-label="06 · Phê phán các con đường cũ" data-notes="Bác Hồ khâm phục lòng yêu nước của Phan Bội Châu, Phan Châu Trinh, Hoàng Hoa Thám nhưng không tán thành phương pháp của các cụ, quyết định sang phương Tây tìm hiểu cội nguồn.">
-      <div class="eyebrow">Hành động của Lãnh tụ</div>
+      <div class="eyebrow">II.1 · Thời kỳ từ ngày 5-6-1911 trở về trước</div>
       <span class="section-number">06</span>
 
       <div class="split-slide-grid">
         <div>
           <h2>5-6-1911: Khảo nghiệm Lịch sử &amp; Quyết định Lớn</h2>
           <p>
-            Tuy vô cùng khâm phục lòng yêu nước của các vị tiền bối Phan Bội Châu, Phan Châu Trinh, Hoàng Hoa Thám... nhưng Nguyễn Tất Thành sớm nhận ra những hạn chế trong đường lối của họ nên không đi theo.
+            <strong>Điểm đặc biệt của tuổi trẻ Hồ Chí Minh là suy ngẫm sâu sắc về Tổ quốc và thời cuộc.</strong> Tuy rất khâm phục tinh thần yêu nước của các vị tiền bối Phan Bội Châu, Phan Châu Trinh, Hoàng Hoa Thám… nhưng Người sáng suốt phê phán, không tán thành, không đi theo các phương pháp, khuynh hướng cứu nước của các vị đó.
           </p>
           <div class="callout">
-            "Người muốn sang phương Tây để tìm hiểu xem nước Pháp và các nước khác làm thế nào, rồi trở về giúp đồng bào mình."
-            <cite>Giáo trình Tư tưởng Hồ Chí Minh, Chương II, Mục II.1, tr.28</cite>
+            "Hồ Chí Minh muốn tìm hiểu những gì ẩn giấu sau sức mạnh của kẻ thù và học hỏi kinh nghiệm cách mạng trên thế giới. Ngày 5-6-1911, Hồ Chí Minh đi ra nước ngoài tìm con đường cứu nước, cứu dân."
+            <cite>Giáo trình Tư tưởng Hồ Chí Minh, Chương II, Mục II.1</cite>
           </div>
         </div>
 
@@ -2438,8 +2543,8 @@
         if (u.querySelector('.sl-head')) return;
 
         const sec = u.closest('section');
-        const eye = sec ? sec.querySelector('.eyebrow') : null;
-        const h2 = sec ? sec.querySelector('h2') : null;
+        const eye = u.querySelector('.eyebrow') || (sec ? sec.querySelector('.eyebrow') : null);
+        const h2 = u.querySelector('h2, h3') || (sec ? sec.querySelector('h2') : null);
         const num = sec ? sec.querySelector('.section-number') : null;
 
         const head = document.createElement('div');
