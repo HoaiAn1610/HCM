@@ -2404,24 +2404,47 @@
         Sản phẩm được thực hiện dựa trên tư duy, lập luận độc lập của người học. Công cụ AI được ứng dụng minh bạch như một trợ lý kỹ thuật:
       </p>
 
-      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
-        <div class="soc-card">
-          <h4>01 · Coding Assistant</h4>
-          <p>Hỗ trợ tạo khung mã HTML/CSS/JS cho chế độ trình chiếu và thiết kế giao diện theo yêu cầu của người học.</p>
-        </div>
-        <div class="soc-card">
-          <h4>02 · Text Extraction</h4>
-          <p>Hỗ trợ số hóa văn bản thô từ tài liệu PDF giáo trình sang định dạng markdown để tiết kiệm thời gian gõ phím.</p>
-        </div>
-        <div class="soc-card">
-          <h4>03 · Copywriting Polish</h4>
-          <p>Rà soát lỗi chính tả và hoàn thiện nhịp điệu diễn đạt trên cơ sở dàn ý và lập luận gốc của người học.</p>
-        </div>
-        <div class="soc-card highlight">
-          <h4>04 · Human Verification</h4>
-          <p>Người học chịu trách nhiệm 100% về tính chính xác của các mốc lịch sử, trích dẫn và tính chính trực học thuật.</p>
-        </div>
-      </div>
+      <style>
+        .ai-table { width: 100%; border-collapse: collapse; font-size: 0.82rem; margin-top: 0.5rem; }
+        .ai-table th { color: var(--gold); padding: 0.75rem; text-align: left; border-bottom: 1px solid var(--border); font-family: 'Space Mono', monospace; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.05em; font-weight: normal; }
+        .ai-table td { padding: 0.75rem; border-bottom: 1px solid var(--border-g); color: var(--tx-s); vertical-align: top; line-height: 1.5; }
+        .ai-table td strong { color: var(--tx); }
+        .ai-table em { color: var(--tx-m); }
+        @media (max-width: 640px) {
+          .ai-table, .ai-table tbody, .ai-table tr, .ai-table td, .ai-table th { display: block; width: 100%; }
+          .ai-table tr { margin-bottom: 1rem; border-bottom: 2px solid var(--gold-d); }
+          .ai-table th { display: none; }
+          .ai-table td { border: none; border-bottom: 1px solid var(--border); position: relative; padding-left: 45%; }
+          .ai-table td::before { content: attr(data-label); position: absolute; left: 1rem; top: 0.75rem; font-family: 'Space Mono', monospace; font-size: 0.65rem; color: var(--gold); text-transform: uppercase; font-weight: bold; width: 40%; }
+        }
+      </style>
+
+      <table class="ai-table">
+        <thead>
+          <tr>
+            <th style="width: 30%;">Câu lệnh Prompt khái quát (Input)</th>
+            <th style="width: 35%;">Kết quả AI phản hồi (Output)</th>
+            <th style="width: 35%;">Cách đối chiếu kiểm chứng (Human Verification)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td data-label="Prompt"><em>"Đọc file PDF đính kèm và trích xuất nội dung về bối cảnh Việt Nam đầu thế kỷ XX để đưa lên website."</em></td>
+            <td data-label="Kết quả AI">AI đọc tài liệu và trích xuất các thông tin, sự kiện lịch sử tương ứng với bối cảnh bài học.</td>
+            <td data-label="Kiểm chứng"><strong>Đối chiếu Giáo trình:</strong> Nhóm so sánh kết quả AI với bản gốc Giáo trình Tư tưởng HCM, đảm bảo không có bất kỳ mốc thời gian hay sự kiện nào bị AI tự ý diễn giải sai lệch (hallucinate).</td>
+          </tr>
+          <tr>
+            <td data-label="Prompt"><em>"Từ nội dung giáo trình, hãy gợi ý cách sắp xếp các sự kiện lịch sử thành một sơ đồ tư duy logic để giải thích nguyên nhân Bác Hồ ra đi tìm đường cứu nước."</em></td>
+            <td data-label="Kết quả AI">AI đề xuất cấu trúc phân chia thành các nhóm nguyên nhân (bối cảnh áp bức, sự bế tắc, bối cảnh thời đại) hội tụ về một hệ quả tất yếu.</td>
+            <td data-label="Kiểm chứng"><strong>Kiểm định Lý luận:</strong> Nhóm đối chiếu cấu trúc AI gợi ý với Giáo trình chuẩn. Xác nhận cách phân nhóm này hoàn toàn bám sát phương pháp luận Mác-xít (phân tích yếu tố khách quan và chủ quan), đảm bảo tính logic chính trị.</td>
+          </tr>
+          <tr>
+            <td data-label="Prompt"><em>"Viết mã HTML/CSS tạo giao diện dạng thẻ (Card) có thể bấm mở rộng để trình bày các phong trào yêu nước."</em></td>
+            <td data-label="Kết quả AI">AI sinh ra bộ khung code giao diện tĩnh (không chứa dữ liệu lịch sử) theo đúng cấu trúc yêu cầu.</td>
+            <td data-label="Kiểm chứng"><strong>Kiểm soát nội dung:</strong> Nhóm chỉ sử dụng bộ khung giao diện của AI. Toàn bộ chữ (text) bên trong được nhóm tự sao chép thủ công từ nguồn tài liệu chuẩn đã kiểm chứng ở Bước 1.</td>
+          </tr>
+        </tbody>
+      </table>
     </div>
   </section>
 
